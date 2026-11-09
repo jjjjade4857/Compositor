@@ -30,6 +30,7 @@ jobs:
           test -f "$app/Contents/Resources/ChineseTranslations.json"
           plutil -lint "$app/Contents/Resources/zh-Hans.lproj/Localizable.strings"
           codesign --force --deep --sign - "$app"
+          codesign --force --sign - --entitlements Config/Compositor.entitlements "$app"
           codesign --verify --strict "$app"
           ditto -c -k --sequesterRsrc --keepParent "$app" build/Compositor-zh-Hans.zip
       - uses: actions/upload-artifact@v4
