@@ -22,35 +22,4 @@ jobs:
           fetch-depth: 0
       - name: Prepare latest release for review
         shell: bash
-        run: |
-          set -euo pipefail
-          tag=$(gh api repos/robbietilton/Compositor/releases/latest --jq .tag_name)
-          [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
-          branch="sync/upstream-$tag"
-          git remote add upstream https://github.com/robbietilton/Compositor.git
-          git fetch upstream "refs/tags/$tag:refs/tags/$tag"
-          if git merge-base --is-ancestor "$tag" HEAD; then
-            echo 'Latest release is already incorporated.'
-            exit 0
-          fi
-          if git ls-remote --exit-code origin "refs/heads/$branch" >/dev/null 2>&1; then
-            echo 'A review branch already exists; preserve its work.'
-            exit 0
-          fi
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git checkout -b "$branch"
-          if ! git merge --no-edit "$tag"; then
-            git merge --abort
-            echo "Merge conflicts for $tag; manual port required." >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
-          python3 scripts/generate-localization.py
-          python3 scripts/audit-localization.py
-          git add Compositor/Resources
-          git diff --cached --quiet || git commit -m "Regenerate Chinese resources for $tag"
-          git push origin "$branch"
-          gh workflow run chinese.yml --ref "$branch"
-          gh pr create --draft --base zh-Hans --head "$branch" \
-            --title "Review Chinese support for upstream $tag" \
-            --body 'Upstream release merged. Review the Chinese build run on this branch, dynamic labels, secondary menus, and project round trips before merging. No automatic release or app replacement is performed.'
+        run: bash scripts/sync-upstream.sh

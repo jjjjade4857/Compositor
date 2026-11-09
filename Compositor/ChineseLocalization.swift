@@ -33,19 +33,29 @@ nonisolated enum ChineseLocalization {
         }
     }()
 
+    /// Substitute original placeholder ranges from right to left, preserving captured user text verbatim.
+    static func substitute(_ template: String, captures: [String]) -> String? {
+        guard let token = try? NSRegularExpression(pattern: "%@|%lld|%ld|%d") else { return nil }
+        let placeholders = token.matches(in: template, range: NSRange(template.startIndex..., in: template))
+        guard placeholders.count == captures.count else { return nil }
+        var result = template
+        for index in placeholders.indices.reversed() {
+            guard let target = Range(placeholders[index].range, in: result) else { return nil }
+            result.replaceSubrange(target, with: captures[index])
+        }
+        return result
+    }
+
     static func text(_ value: String) -> String {
         guard enabled, !value.isEmpty else { return value }
         let direct = bundle.localizedString(forKey: value, value: value, table: nil)
         if direct != value { return direct }
         for (regex, template) in templates {
             guard let match = regex.firstMatch(in: value, range: NSRange(value.startIndex..., in: value)) else { continue }
-            var result = template
-            for index in 1..<match.numberOfRanges {
-                guard let range = Range(match.range(at: index), in: value),
-                      let placeholder = result.range(of: "%@|%lld|%ld|%d", options: .regularExpression) else { continue }
-                result.replaceSubrange(placeholder, with: String(value[range]))
+            let captures = (1..<match.numberOfRanges).compactMap { index in
+                Range(match.range(at: index), in: value).map { String(value[$0]) }
             }
-            return result
+            if let result = substitute(template, captures: captures) { return result }
         }
         if value.hasSuffix("…") {
             let stem = String(value.dropLast()), translated = text(stem)

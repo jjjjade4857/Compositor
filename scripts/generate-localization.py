@@ -1,12 +1,14 @@
 """Generate native bundle resources from the reviewed translation table."""
 from pathlib import Path
-import json
+import json, re
 root=Path(__file__).resolve().parents[1]
 terms={}
 for line in (root/'localization/zh-Hans.txt').read_text().splitlines():
  if line and not line.startswith('#') and '|' in line:
   key,value=line.split('|',1)
   if key in terms and terms[key]!=value:raise ValueError('Conflicting translation: '+key)
+  tokens = lambda text: re.findall(r"%(?:lld|ld|d|@)", text)
+  if tokens(key) != tokens(value): raise ValueError("Placeholder mismatch: "+key)
   terms[key]=value
 for key,value in list(terms.items()):
  if not key.endswith('…'):terms.setdefault(key+'…',value+'…')

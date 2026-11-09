@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 terms=dict(l.split('|',1) for l in (ROOT/'localization/zh-Hans.txt').read_text().splitlines() if l and not l.startswith('#') and '|' in l)
 # Hardware product names remain unchanged.
 allowed={'RGB','CMYK','iPhone 18 Pro','iPhone 18 Pro Max','MacBook Pro 14\\\"','MacBook Pro 16\\\"','Studio Display'}
-pattern=re.compile(r'(?:\b(?:Button|Menu|Text|Toggle|Picker|Label|TextField|ColorPicker)|\.(?:help|accessibilityLabel|alert))\((?:zh\()?"((?:[^"\\]|\\.)*)"|(?:title: |withTitle: )"((?:[^"\\]|\\.)*)"')
+pattern=re.compile(r'(?:\b(?:Button|Menu|Text|Toggle|Picker|Label|TextField|ColorPicker)|\.(?:help|accessibilityLabel|alert|setAccessibilityLabel|setAccessibilityHelp))\((?:zh\()?"((?:[^"\\]|\\.)*)"|(?:\.toolTip = (?:zh\()?|title: |withTitle: )"((?:[^"\\]|\\.)*)"')
 missing=[]
 for p in sorted((ROOT/'Compositor').rglob('*.swift')):
  if p.name=='UpdateDriver.swift':continue

@@ -13,6 +13,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      - name: Check maintenance regressions
+        run: python3 scripts/test-maintenance.py
       - name: Check translation coverage
         run: python3 scripts/audit-localization.py
       - name: Generate bundle resources

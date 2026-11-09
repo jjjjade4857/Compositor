@@ -1276,6 +1276,7 @@
   "About Chinese Support…": "关于中文支持…",
   "Compositor Chinese Support": "Compositor 中文支持",
   "Community fork with Chinese support. Updates are reviewed and built separately from upstream.": "提供中文支持的社区分支。更新会在合并上游后单独审查与构建。",
+  "Canvas text": "画布文字",
   "File…": "文件…",
   "Edit…": "编辑…",
   "Image…": "图像…",
@@ -2488,5 +2489,6 @@
   "How many pixels to expand, contract or feather the selection by…": "扩展、收缩或羽化选区的像素数…",
   "Export Background…": "导出背景…",
   "Compositor Chinese Support…": "Compositor 中文支持…",
-  "Community fork with Chinese support. Updates are reviewed and built separately from upstream.…": "提供中文支持的社区分支。更新会在合并上游后单独审查与构建。…"
+  "Community fork with Chinese support. Updates are reviewed and built separately from upstream.…": "提供中文支持的社区分支。更新会在合并上游后单独审查与构建。…",
+  "Canvas text…": "画布文字…"
 }

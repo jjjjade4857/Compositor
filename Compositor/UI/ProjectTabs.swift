@@ -305,7 +305,7 @@ private struct OverflowMenuAnchor: NSViewRepresentable {
     func makeNSView(context: Context) -> AnchorView { AnchorView() }
     func updateNSView(_ view: AnchorView, context: Context) {
         view.items = items
-        view.setAccessibilityLabel(label)
+        view.setAccessibilityLabel(zh(label))
     }
     final class AnchorView: NSView {
         var items: () -> [(title: String, action: () -> Void)] = { [] }
