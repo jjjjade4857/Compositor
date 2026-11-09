@@ -113,8 +113,8 @@ struct ExportAsSheet: View {
                         isGIFPreviewPlaying.toggle()
                     } label: { Image(systemName: isGIFPreviewPlaying ? "pause.fill" : "play.fill").foregroundStyle(.white) }
                         .disabled(!isReady)
-                        .help(isGIFPreviewPlaying ? "Pause the animation preview." : "Play the animation preview.")
-                        .accessibilityLabel(isGIFPreviewPlaying ? "Pause animation preview" : "Play animation preview")
+                        .help(zh(isGIFPreviewPlaying ? "Pause the animation preview." : "Play the animation preview."))
+                        .accessibilityLabel(zh(isGIFPreviewPlaying ? "Pause animation preview" : "Play animation preview"))
                 }
                 Button("Fit") { zoom = nil }.disabled(zoom == nil)
                     .help("Show the whole image (⌘0)")
@@ -144,7 +144,7 @@ struct ExportAsSheet: View {
                     // which takes the chosen one's name.
                     HStack(spacing: 12) {
                         Picker("Format", selection: $format) {
-                            ForEach([ExportFormat.jpeg, .png], id: \.self) { Text($0.rawValue).tag($0) }
+                            ForEach([ExportFormat.jpeg, .png], id: \.self) { Text(zh($0.rawValue)).tag($0) }
                         }
                         .pickerStyle(.segmented).labelsHidden().fixedSize()
                         moreFormats
@@ -198,7 +198,7 @@ struct ExportAsSheet: View {
                 if format == .channelPack {
                     ForEach(Array(ChannelPack.Channel.allCases.enumerated()), id: \.offset) { index, channel in
                         GridRow {
-                            Text(channel.rawValue)
+                            Text(zh(channel.rawValue))
                             channelPicker(index, channel: channel)
                         }
                     }
@@ -206,7 +206,7 @@ struct ExportAsSheet: View {
                 if format == .pdf {
                     GridRow {
                         Text("Page")
-                        Text(pageSize).foregroundStyle(.secondary)
+                        Text(zh(pageSize)).foregroundStyle(.secondary)
                     }
                 }
                 if format == .gif {
@@ -225,7 +225,7 @@ struct ExportAsSheet: View {
                     }
                     GridRow {
                         Text("Frames")
-                        Text(gifSummary).foregroundStyle(.secondary)
+                        Text(zh(gifSummary)).foregroundStyle(.secondary)
                     }
                 }
                 // JPEG has no transparency, and a PDF's page shows through it, so both fill it with a color.
@@ -238,16 +238,16 @@ struct ExportAsSheet: View {
                 }
             }
             HStack(spacing: 12) {
-                Text(format == .channelPack ? "Each channel from a layer, read as grayscale · PNG"
+                Text(zh(format == .channelPack ? "Each channel from a layer, read as grayscale · PNG"
                      : format == .gif ? "Up to 256 colors · sRGB" : format == .exr ? "Brighter than white kept · Transparency kept"
                      : takesCMYK && cmyk ? "CMYK – \(profile?.name ?? "No profile")"
-                     : format == .png || format == .tiff ? "Transparency kept · sRGB" : "sRGB")
+                     : format == .png || format == .tiff ? "Transparency kept · sRGB" : "sRGB"))
                     .foregroundStyle(.secondary)
                 Spacer()
                 if isReady, let result {
-                    Text(ByteCountFormatter.string(fromByteCount: Int64(result.data.count), countStyle: .file)).monospacedDigit()
+                    Text(zh(ByteCountFormatter.string(fromByteCount: Int64(result.data.count), countStyle: .file))).monospacedDigit()
                 } else if error == nil {
-                    Text(format == .gif ? gifProgress.map { "Encoding frame \(min($0.completed + 1, $0.total)) of \($0.total)…" } ?? "Updating…" : "Updating…")
+                    Text(zh(format == .gif ? gifProgress.map { "Encoding frame \(min($0.completed + 1, $0.total)) of \($0.total)…" } ?? "Updating…" : "Updating…"))
                         .foregroundStyle(.secondary).monospacedDigit()
                 }
                 Button("Cancel") { DialogColorSwatch.closePicker(session); finish(nil) }.configuredNativeShortcut(.escape)
@@ -260,7 +260,7 @@ struct ExportAsSheet: View {
                     .configuredNativeShortcut(.return)
                     .disabled(!isReady)
             }
-            if let error { Text(error).foregroundStyle(.red).fixedSize(horizontal: false, vertical: true).frame(maxWidth: JPEGPreview.frame.width, alignment: .leading) }
+            if let error { Text(zh(error)).foregroundStyle(.red).fixedSize(horizontal: false, vertical: true).frame(maxWidth: JPEGPreview.frame.width, alignment: .leading) }
         }
         .padding(24)
         .onAppear {
@@ -377,7 +377,7 @@ struct ExportAsSheet: View {
     /// RGB or CMYK: one small menu, as few need CMYK. The profile CMYK goes through is View › CMYK › Profile's, named in
     /// the line under the settings.
     private var colorMenu: some View {
-        Menu(cmyk ? "CMYK" : "RGB") {
+        Menu(zh(cmyk ? "CMYK" : "RGB")) {
             Toggle("RGB", isOn: Binding(get: { !cmyk }, set: { if $0 { cmyk = false } }))
             Toggle("CMYK", isOn: Binding(get: { cmyk }, set: { if $0 { cmyk = true } }))
         }
@@ -399,9 +399,9 @@ struct ExportAsSheet: View {
     @ViewBuilder private var moreFormats: some View {
         let others = formats.filter { $0 != .png && $0 != .jpeg }
         let chosen = others.contains(format)
-        let menu = Menu(chosen ? format.rawValue : "More") {
+        let menu = Menu(zh(chosen ? format.rawValue : "More")) {
             Picker("More formats", selection: $format) {
-                ForEach(others, id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(others, id: \.self) { Text(zh($0.rawValue)).tag($0) }
             }
             .pickerStyle(.inline).labelsHidden()
         }
@@ -413,7 +413,7 @@ struct ExportAsSheet: View {
     /// A channel's source: one of the document's layers or groups, top first, or solid black or white.
     private func channelPicker(_ index: Int, channel: ChannelPack.Channel) -> some View {
         let layers = snapshot?.manifest.layers ?? []
-        return Picker(channel.rawValue, selection: $channels[index]) {
+        return Picker(zh(channel.rawValue), selection: $channels[index]) {
             Text("Black").tag(ChannelPack.Source.black)
             Text("White").tag(ChannelPack.Source.white)
             Divider()

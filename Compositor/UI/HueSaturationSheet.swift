@@ -34,7 +34,7 @@ struct HueSaturationSheet: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(spacing: 12) {
                 Picker("Range", selection: settings.range) {
-                    ForEach(ColorRange.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(ColorRange.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
                 }
                 .pickerStyle(.menu).labelsHidden().frame(width: 160, alignment: .leading).disabled(current.colorize)
                 Spacer()
@@ -88,7 +88,7 @@ struct HueSaturationSheet: View {
                     .buttonStyle(.plain)
                     .background(session.hueSampleMode == mode ? Color.accentColor.opacity(0.25) : .clear,
                                 in: RoundedRectangle(cornerRadius: 4))
-                    .help(mode.help)
+                    .help(zh(mode.help))
                     .accessibilityLabel("\(mode.rawValue) color")
                 }
                 Divider().frame(height: 16)
@@ -126,12 +126,12 @@ struct HueSaturationSheet: View {
     private func slider(_ title: String, value: Binding<Double>, range: ClosedRange<Double>, unit: String,
                         track: CameraRawSliderTrack, reset: Double) -> some View {
         HStack(spacing: 10) {
-            Text(title).frame(width: 76, alignment: .leading)
+            Text(zh(title)).frame(width: 76, alignment: .leading)
                 .onTapGesture(count: 2) { value.wrappedValue = reset }
                 .scrubbable(sensitivity: 1, value: value, range: range)
             CameraRawSlider(value: value.wrappedValue, range: range, track: track, help: "\(title). Double-click to reset.",
                             onChange: { value.wrappedValue = $0.rounded() }, onReset: { value.wrappedValue = reset })
-            TextField(title, value: value, format: .number.precision(.fractionLength(0)))
+            TextField(zh(title), value: value, format: .number.precision(.fractionLength(0)))
                 .frame(width: 48).textFieldStyle(.roundedBorder).multilineTextAlignment(.trailing)
                 // A field's own submit swallows Return, so it confirms the window itself, as OK does.
                 .onSubmit {
@@ -139,7 +139,7 @@ struct HueSaturationSheet: View {
                     Task { await session.commitHueSaturation() }
                 }
             // A column the same width for every unit, so the fields line up whether or not a row has one.
-            Text(unit).frame(width: 16, alignment: .trailing).padding(.leading, -8)
+            Text(zh(unit)).frame(width: 16, alignment: .trailing).padding(.leading, -8)
         }
     }
 }
@@ -156,7 +156,7 @@ struct SpectrumEditor: View {
             spectrum(after: false)
             handles
             spectrum(after: true)
-            Text(settings.band.handles.map { "\(Int($0.rounded()))°" }.joined(separator: "   "))
+            Text(zh(settings.band.handles.map { "\(Int($0.rounded()))°" }.joined(separator: "   ")))
                 .font(.caption.monospacedDigit()).foregroundStyle(.secondary)
         }
     }

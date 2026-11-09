@@ -25,7 +25,7 @@ struct AppSlider<Value: BinaryFloatingPoint>: View where Value.Stride: BinaryFlo
                         onChange: { fraction in value = snapped(fraction) },
                         onEnd: { onEditingChanged(false) },
                         onReset: nil)
-            .accessibilityValue(Text(String(format: "%.0f", Double(value))))
+            .accessibilityValue(Text(zh(String(format: "%.0f", Double(value)))))
             .accessibilityAdjustableAction { direction in
                 let nudge = step ?? (range.upperBound - range.lowerBound) / 20
                 switch direction {

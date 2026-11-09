@@ -276,7 +276,7 @@ private struct OverflowTabsPill: View {
     private var label: String { projectTabOverflowLabel(for: hiddenIDs.count) }
     var body: some View {
         HStack(spacing: 4) {
-            Text(label).font(.system(size: 12, weight: .medium))
+            Text(zh(label)).font(.system(size: 12, weight: .medium))
             Image(systemName: "chevron.down").font(.system(size: 9, weight: .medium))
         }
         .padding(.horizontal, 11)
@@ -293,7 +293,7 @@ private struct OverflowTabsPill: View {
                 }
             }
         })
-        .help(label)
+        .help(zh(label))
         .accessibilityIdentifier("projectTabsOverflow")
     }
 }
@@ -321,7 +321,7 @@ private struct OverflowMenuAnchor: NSViewRepresentable {
             actions = entries.map(\.action)
             let menu = NSMenu()
             for (index, entry) in entries.enumerated() {
-                let item = NSMenuItem(title: entry.title, action: #selector(choose(_:)), keyEquivalent: "")
+                let item = NSMenuItem(title: zh(entry.title), action: #selector(choose(_:)), keyEquivalent: "")
                 item.target = self
                 item.tag = index
                 menu.addItem(item)
@@ -347,7 +347,7 @@ private struct ProjectTabButton: View {
                     if tab.session.isModified {
                         Circle().frame(width: 5, height: 5).accessibilityLabel("Unsaved changes")
                     }
-                    Text(tab.title).font(.system(size: 12, weight: active ? .semibold : .medium)).lineLimit(1)
+                    Text(zh(tab.title)).font(.system(size: 12, weight: active ? .semibold : .medium)).lineLimit(1)
                 }
                 .frame(width: projectTabLabelWidth(tab, active: active), alignment: .leading)
                 .padding(.leading, 11).padding(.trailing, workspace.canClose(tab) ? 8 : 11)
@@ -376,7 +376,7 @@ private struct ProjectTabButton: View {
         .frame(height: 28)
         .background(targeted ? Color.accentColor.opacity(0.3) : Color.white.opacity(active ? 0.12 : 0.035), in: Capsule())
         .overlay(Capsule().strokeBorder(targeted ? Color.accentColor : Color.white.opacity(active ? 0.22 : 0.08), lineWidth: targeted ? 2 : 1))
-        .help(targeted ? "Add to \(tab.title)" : tab.title)
+        .help(zh(targeted ? "Add to \(tab.title)" : tab.title))
         .onDrop(of: [UTType.fileURL.identifier, UTType.image.identifier, ProjectWorkspace.layerType], delegate:
             ProjectTabDropDelegate(workspace: workspace, destination: tab.id, targeted: $targeted))
     }
@@ -388,7 +388,7 @@ struct NewProjectDropTarget: ViewModifier {
     func body(content: Content) -> some View {
         content
             .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(targeted ? Color.accentColor : .clear, lineWidth: 2))
-            .help(targeted ? "Open in a new project tab" : "New canvas (⌘N) · Drop images here for new tabs")
+            .help(zh(targeted ? "Open in a new project tab" : "New canvas (⌘N) · Drop images here for new tabs"))
             .onDrop(of: [UTType.fileURL.identifier, UTType.image.identifier, ProjectWorkspace.layerType], delegate:
                 ProjectTabDropDelegate(workspace: workspace, destination: nil, targeted: $targeted))
     }

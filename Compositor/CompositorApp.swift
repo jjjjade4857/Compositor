@@ -1,6 +1,5 @@
 import SwiftUI
 import UniformTypeIdentifiers
-import Sparkle
 
 @main
 struct CompositorApp: App {
@@ -45,12 +44,12 @@ struct CompositorApp: App {
                             .configuredKeyboardShortcut("z", modifiers: [.command, .shift])
                     } else {
                         // A Save or Open panel's name field undoes its own typing (see `isEditingText`).
-                        Button(session.history.canUndo ? "Undo \(session.history.undoName)" : "Undo") {
+                        Button(zh(session.history.canUndo ? "Undo \(session.history.undoName)" : "Undo")) {
                             if NSApp.keyWindow is NSSavePanel { NSApp.sendAction(NSSelectorFromString("undo:"), to: nil, from: nil) }
                             else { session.undo() }
                         }
                             .configuredKeyboardShortcut("z").disabled(!session.canUndo)
-                        Button(session.history.canRedo ? "Redo \(session.history.redoName)" : "Redo") {
+                        Button(zh(session.history.canRedo ? "Redo \(session.history.redoName)" : "Redo")) {
                             if NSApp.keyWindow is NSSavePanel { NSApp.sendAction(NSSelectorFromString("redo:"), to: nil, from: nil) }
                             else { session.redo() }
                         }
@@ -108,7 +107,13 @@ struct CompositorApp: App {
                 // Grouped: a commands builder takes at most ten items.
                 Group {
                     CommandGroup(after: .appInfo) {
-                        Button("Check for Updates…") { applicationDelegate.updater.checkForUpdates() }
+                        Button("About Chinese Support…") {
+                            let alert = NSAlert()
+                            alert.messageText = zh("Compositor Chinese Support")
+                            alert.informativeText = zh("Community fork with Chinese support. Updates are reviewed and built separately from upstream.")
+                            alert.addButton(withTitle: zh("OK"))
+                            alert.runModal()
+                        }
                     }
                     CommandGroup(after: .toolbar) {
                         Button("Search Commands…") {
@@ -166,7 +171,7 @@ struct CompositorApp: App {
                             Menu("Profile") {
                                 let current = session.proofProfile ?? CMYK.chosen
                                 ForEach(CMYK.installed()) { profile in
-                                    Toggle(profile.name, isOn: Binding(get: { current?.name == profile.name },
+                                    Toggle(zh(profile.name), isOn: Binding(get: { current?.name == profile.name },
                                                                        set: { if $0 { session.proofProfile = profile } }))
                                 }
                                 Divider()
@@ -320,7 +325,7 @@ struct CompositorApp: App {
                         Button("\(kind.rawValue)…") { session.beginFilter(kind) }
                             .disabled(!session.canAdjustColors || session.hueSaturation != nil)
                     }
-                    Button(session.isMaskSelected ? "Invert Mask" : "Invert") { Task { await session.invertPixels() } }
+                    Button(zh(session.isMaskSelected ? "Invert Mask" : "Invert")) { Task { await session.invertPixels() } }
                         .configuredKeyboardShortcut("i")
                         .disabled(!session.canInvert)
                     Divider()
@@ -345,7 +350,7 @@ struct CompositorApp: App {
                     }
                 }
                 CommandMenu("Filter") {
-                    Button(session.lastFilter.map { "Last Filter: " + $0.rawValue } ?? "Last Filter") {
+                    Button(zh(session.lastFilter.map { "Last Filter: " + $0.rawValue } ?? "Last Filter")) {
                         Task { await session.repeatLastFilter() }
                     }
                         // ⌃⌘F, as in Photoshop; ⌘F is the command palette.
@@ -362,23 +367,23 @@ struct CompositorApp: App {
                     Menu("New Adjustment Layer") {
                         // The Image menu's adjustments, then the Filter menu's filters.
                         ForEach(AdjustmentKind.imageAdjustments, id: \.self) { kind in
-                            Button(kind.rawValue + (kind.isEditable ? "…" : "")) { session.addAdjustment(kind) }
+                            Button(zh(kind.rawValue + (kind.isEditable ? "…" : ""))) { session.addAdjustment(kind) }
                         }
                         Divider()
                         ForEach(AdjustmentKind.filters, id: \.self) { kind in
-                            Button(kind.rawValue + "…") { session.addAdjustment(kind) }
+                            Button(zh(kind.rawValue + "…")) { session.addAdjustment(kind) }
                         }
                     }.disabled(!session.canEditLayers || session.document == nil)
                     Button("Edit Adjustment…") {
                         session.adjustmentEditingID = session.activeLayerID
                     }.disabled(!session.canEditLayers || session.activeLayer?.adjustment == nil)
                     Divider()
-                    Button(session.canTransformSelection ? "Transform Selection" : "Transform Layer") { session.transformCommand() }
+                    Button(zh(session.canTransformSelection ? "Transform Selection" : "Transform Layer")) { session.transformCommand() }
                         .configuredKeyboardShortcut("t").disabled(!session.canTransform && !session.canTransformSelection)
-                    Button(session.selection == nil ? "Duplicate Layer" : "Layer via Copy") { session.layerViaCopy() }
+                    Button(zh(session.selection == nil ? "Duplicate Layer" : "Layer via Copy")) { session.layerViaCopy() }
                         .configuredKeyboardShortcut("j").disabled(!session.canCopyPixels && !(session.selection == nil && session.canEditLayers && session.activeLayer != nil))
                     Divider()
-                    Button(session.selectedClippingTitle) { session.toggleSelectedClipping() }
+                    Button(zh(session.selectedClippingTitle)) { session.toggleSelectedClipping() }
                     .configuredKeyboardShortcut("g", modifiers: [.command, .option])
                     .disabled(!session.canToggleSelectedClipping)
                     Divider()
@@ -392,7 +397,7 @@ struct CompositorApp: App {
                         .configuredKeyboardShortcut("n", modifiers: [.command, .shift]).disabled(!session.canEditLayers)
                     Button("Rename Layer…") { session.renamingLayerID = session.activeLayerID }
                         .disabled(!session.canEditLayers || session.activeLayer == nil)
-                    Button(session.visibilityTitle) {
+                    Button(zh(session.visibilityTitle)) {
                         session.toggleSelectedLayersVisibility()
                     }.disabled(!session.canEditLayers || session.activeLayer == nil)
                     Divider()
@@ -401,7 +406,7 @@ struct CompositorApp: App {
                     Button("Move Layer Down") { session.moveActiveLayer(by: -1) }
                         .configuredKeyboardShortcut("[").disabled(!session.canMoveActiveLayer(by: -1))
                     Group {
-                        Button(session.mergeTitle) { session.mergeLayers() }
+                        Button(zh(session.mergeTitle)) { session.mergeLayers() }
                             .configuredKeyboardShortcut("e").disabled(!session.canMergeLayers)
                         // As in the Layers panel's menu: whichever would change a selected layer, both for a mix.
                         if session.canConvertToSixteenBit || !session.canConvertToEightBit {
@@ -418,19 +423,19 @@ struct CompositorApp: App {
                             .disabled(!session.canTransform)
                         Menu("Align") {
                             ForEach(LayerAlignment.allCases, id: \.self) { alignment in
-                                Button(alignment.rawValue) { session.alignLayers(alignment) }
+                                Button(zh(alignment.rawValue)) { session.alignLayers(alignment) }
                             }
                         }
                             .disabled(!session.canAlignLayers)
                         Menu("Distribute") {
                             ForEach(LayerDistribution.allCases, id: \.self) { distribution in
-                                Button(distribution.rawValue) { session.distributeLayers(distribution) }
+                                Button(zh(distribution.rawValue)) { session.distributeLayers(distribution) }
                             }
                         }
                             .disabled(!session.canDistributeLayers)
                     }
                     Divider()
-                    Button(session.selectedEffect != nil ? "Delete " + session.selectedEffect!.kind.rawValue : session.isMaskSelected && session.activeLayer.flatMap({ session.selectedMask(for: $0) }) != nil ? "Delete Layer Mask" : session.selectedLayerIDs.count > 1 ? "Delete Layers" : "Delete Layer") {
+                    Button(zh(session.selectedEffect != nil ? "Delete " + session.selectedEffect!.kind.rawValue : session.isMaskSelected && session.activeLayer.flatMap({ session.selectedMask(for: $0) }) != nil ? "Delete Layer Mask" : session.selectedLayerIDs.count > 1 ? "Delete Layers" : "Delete Layer")) {
                         session.deleteLayerOrMask()
                     }
                         .disabled(!session.canEditLayers || session.activeLayer == nil)

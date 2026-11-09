@@ -152,9 +152,9 @@ struct ColorPickerSheet: View {
                 hsb.setRGB(rgb)
             })
         return GridRow {
-            Text(label).frame(width: 12, alignment: .leading)
+            Text(zh(label)).frame(width: 12, alignment: .leading)
                 .scrubbable(sensitivity: 1, value: channelValue, range: 0...255)
-            TextField(label, value: channelValue, format: .number)
+            TextField(zh(label), value: channelValue, format: .number)
                 .frame(width: 52)
                 .arrowSteps(value: { Double(Int((color[keyPath: channel] * 255).rounded())) },
                             change: { newValue in
@@ -162,7 +162,7 @@ struct ColorPickerSheet: View {
                                 rgb[keyPath: channel] = CGFloat(min(255, max(0, newValue.rounded()))) / 255
                                 hsb.setRGB(rgb)
                             })
-                .accessibilityLabel(label == "R" ? "Red" : label == "G" ? "Green" : "Blue")
+                .accessibilityLabel(zh(label == "R" ? "Red" : label == "G" ? "Green" : "Blue"))
         }
     }
 
@@ -240,7 +240,7 @@ struct DialogColorSwatch: View {
             ColorSwatch(color: color.swiftUI)
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(title)
+        .accessibilityLabel(zh(title))
         .onChange(of: session.colorPicker?.color) { _, _ in session.previewDialogColor() }
         .onDisappear { Self.closePicker(session) }
     }

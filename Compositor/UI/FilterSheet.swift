@@ -70,7 +70,7 @@ struct FilterSheet: View {
                     .fixedSize(horizontal: false, vertical: true)
                 Picker("Quality", selection: Binding(get: { settings.backgroundQuality },
                                                      set: { new in update { $0.backgroundQuality = new } })) {
-                    ForEach(BackgroundQuality.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(BackgroundQuality.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
                 }
                 .pickerStyle(.segmented).labelsHidden()
                 .help("Basic is quick; Advanced refines the mask against the layer's own detail, for hair and fur")
@@ -203,7 +203,7 @@ struct FilterSheet: View {
                                                 set: { session.updateFilter(settings, preview: $0) }))
             }
             if let error = edit?.previewError {
-                Text(error).foregroundStyle(.orange).fixedSize(horizontal: false, vertical: true)
+                Text(zh(error)).foregroundStyle(.orange).fixedSize(horizontal: false, vertical: true)
             }
             if session.adjustmentOriginal == nil && session.selection != nil {
                 Text("Limited to the selection").font(.callout).foregroundStyle(.secondary)
@@ -227,7 +227,7 @@ struct FilterSheet: View {
                 // make the panel flicker as it grows and shrinks.
                 if edit?.committing == true || (edit?.preparing == true && edit?.kind.isAutomatic == true) {
                     ProgressView().controlSize(.small)
-                    Text(edit?.committing == true ? "Applying…" : "Working…")
+                    Text(zh(edit?.committing == true ? "Applying…" : "Working…"))
                         .font(.callout).foregroundStyle(.secondary)
                 } else if edit?.kind == .volumetricLight, session.preparingDepth {
                     // The first time only: the depth model is downloading (about 2.6 MB).
@@ -240,7 +240,7 @@ struct FilterSheet: View {
                     Text("Finding the subject…").font(.callout).foregroundStyle(.secondary)
                 }
                 if edit?.kind == .volumetricLight {
-                    Button("Extract Depth") { Task { await session.extractDepth() } }
+                    Button(zh("Extract Depth")) { Task { await session.extractDepth() } }
                         .help("Close the filter and add the depth the haze goes by as a new layer: white is near, black is far")
                         .disabled(volumetricWaiting)
                 }
@@ -272,7 +272,7 @@ struct FilterSheet: View {
         Picker("Style", selection: Binding(get: { dither.style }, set: { new in update { $0.dither.style = new } })) {
             ForEach(DitherStyle.groups.indices, id: \.self) { group in
                 if group > 0 { Divider() }
-                ForEach(DitherStyle.groups[group], id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(DitherStyle.groups[group], id: \.self) { Text(zh($0.rawValue)).tag($0) }
             }
         }
         if dither.style.usesPixelSize {
@@ -311,7 +311,7 @@ struct FilterSheet: View {
         // A menu, like Style: the three choices as segments are wider than the panel, which then flips between
         // squeezing the row and wrapping it, resizing itself at every slider step.
         Picker("Colors", selection: Binding(get: { dither.colors }, set: { new in update { $0.dither.colors = new } })) {
-            ForEach(DitherColors.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            ForEach(DitherColors.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
         }
         .fixedSize()
         if dither.colors == .twoColors {
@@ -325,7 +325,7 @@ struct FilterSheet: View {
         }
         if dither.pixelSize > 1, dither.style.usesPixelSize {
             Picker("Pixel Shape", selection: Binding(get: { dither.pixelShape }, set: { new in update { $0.dither.pixelShape = new } })) {
-                ForEach(DitherPixelShape.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(DitherPixelShape.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
             }
             .fixedSize()
             .help("Draw each chunky pixel as a solid square, or as a round dot like a dot-matrix screen")
@@ -362,7 +362,7 @@ struct FilterSheet: View {
         control("Black Level", \.scanlines.blackLevel, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
             .help("How bright the lines are where the picture is black, so they show even over black")
         Picker("Colors", selection: Binding(get: { lines.colors }, set: { new in update { $0.scanlines.colors = new } })) {
-            ForEach(DitherColors.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            ForEach(DitherColors.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
         }
         .fixedSize()
         if lines.colors == .twoColors {
@@ -381,7 +381,7 @@ struct FilterSheet: View {
             ColorSwatch(color: Color(.sRGB, red: color.red, green: color.green, blue: color.blue))
         }
         .buttonStyle(.plain)
-        .help(help)
+        .help(zh(help))
     }
 
     /// Lens Effects: which effect, then its own settings.
@@ -396,7 +396,7 @@ struct FilterSheet: View {
     @ViewBuilder private var volumetricLightControls: some View {
         let color = settings.volumetric.color
         HStack(spacing: 8) {
-            Text("Click or drag on the canvas to move the light")
+            Text(zh("Click or drag on the canvas to move the light"))
                 .foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
             Spacer()
             Button { session.openVolumetricLightColorPicker() } label: {
@@ -419,7 +419,7 @@ struct FilterSheet: View {
             .help("How far from the light the beams reach")
         control("Shafts", \.volumetric.shafts, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
             .help("How much the beams break up into separate shafts")
-        Toggle("Keep Subject Clear", isOn: flag(\.volumetric.keepsSubjectClear))
+        Toggle(zh("Keep Subject Clear"), isOn: flag(\.volumetric.keepsSubjectClear))
             .help("Keep the subject clear of the haze; off, it's hazed by its own distance, so a figure far off is misted")
     }
 
@@ -469,7 +469,7 @@ struct FilterSheet: View {
         HStack(spacing: 10) {
             Text("Effect")
             Picker("Effect", selection: Binding(get: { settings.lens.effect }, set: { new in update { $0.lens.effect = new } })) {
-                ForEach(LensEffect.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(LensEffect.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
             }
             .labelsHidden().fixedSize()
         }
@@ -533,7 +533,7 @@ struct FilterSheet: View {
             HStack(spacing: 10) {
                 Text("Shape")
                 Picker("Shape", selection: Binding(get: { settings.lens.bokehShape }, set: { new in update { $0.lens.bokehShape = new } })) {
-                    ForEach(BokehShape.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(BokehShape.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
                 }
                 .labelsHidden().fixedSize()
                 .help("The aperture's shape: round wide open, a hexagon of blades, an anamorphic oval, or a cat's eye toward the edges")
@@ -566,7 +566,7 @@ struct FilterSheet: View {
         let step = pow(10, Double(decimals))
         let reset = { update { $0 = Self.resetting(key, in: $0) } }
         return HStack(spacing: 10) {
-            Text(title).fixedSize()
+            Text(zh(title)).fixedSize()
                 .background(GeometryReader { Color.clear.preference(key: LabelWidthKey.self, value: $0.size.width) })
                 .frame(width: labelWidth, alignment: .leading)
                 .onTapGesture(count: 2) { if track != nil { reset() } }
@@ -583,7 +583,7 @@ struct FilterSheet: View {
                                       set: { value in update { $0[keyPath: key] = ((logarithmic ? exp(value) : value) * step).rounded() / step } }),
                        in: logarithmic ? log(range.lowerBound)...log(range.upperBound) : range)
             }
-            TextField(title, value: Binding(get: { settings[keyPath: key] }, set: { value in update { $0[keyPath: key] = value } }),
+            TextField(zh(title), value: Binding(get: { settings[keyPath: key] }, set: { value in update { $0[keyPath: key] = value } }),
                       format: .number.precision(.fractionLength(0...decimals)))
                 .frame(width: 56).textFieldStyle(.roundedBorder).multilineTextAlignment(.trailing)
                 .unitSuffix(unit)
@@ -625,7 +625,7 @@ struct GradientMapControls: View {
             .buttonStyle(.plain)
             .help("Choose the \(title.lowercased()) color")
             .accessibilityLabel("\(title) color")
-            Text(title)
+            Text(zh(title))
         }
     }
 }

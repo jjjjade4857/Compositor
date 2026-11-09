@@ -9,8 +9,8 @@ struct LayerMaskMenu: View {
         Button {
             session.addMask(revealing: NSApp.currentEvent?.modifierFlags.contains(.option) != true)
         } label: { FooterIcon(systemName: "rectangle.inset.filled") }
-        .help(session.selection == nil ? "Add layer mask (Option-click for a black mask)"
-              : "Add layer mask revealing the selection (Option-click to hide it)")
+        .help(zh(session.selection == nil ? "Add layer mask (Option-click for a black mask)"
+              : "Add layer mask revealing the selection (Option-click to hide it)"))
         .accessibilityLabel("Add layer mask")
         .disabled(!session.layersLookEditable || session.selectedLayerIDs.count != 1 || session.activeLayer == nil
                   || session.activeLayer?.mask != nil)
@@ -27,7 +27,7 @@ struct MaskAloneBadge: NSViewRepresentable {
                        closeHelp: "Show the image again (or Option-click the mask thumbnail)") { [session] in session.viewsMaskAlone = false }
     }
     func updateNSView(_ view: CanvasPillView, context: Context) {
-        view.title = "Layer Mask"
+        view.title = zh("Layer Mask")
         view.detail = layer.name
     }
 }
@@ -45,7 +45,7 @@ struct ProofBadge: NSViewRepresentable {
                                closeHelp: "Show the document's own colors again") { [session] in session.proofsColors = false }
     }
     func updateNSView(_ view: CanvasPillView, context: Context) {
-        view.title = gamut ? "CMYK Gamut Warning" : "CMYK Proof"
+        view.title = zh(gamut ? "CMYK Gamut Warning" : "CMYK Proof")
         view.detail = session.proofProfile?.name ?? ""
     }
 }

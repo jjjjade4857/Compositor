@@ -8,7 +8,7 @@ struct TransformInspector: View {
     }
     var body: some View {
         HStack(spacing: 12) {
-          Text(session.transformTargetsMask ? "Transform Mask" : "Transform").font(ToolHeaderStyle.titleFont)
+          Text(zh(session.transformTargetsMask ? "Transform Mask" : "Transform")).font(ToolHeaderStyle.titleFont)
               .padding(.leading, 18)
           // Command flips Auto Select while it's held, and the box shows it flipped (see HeldModifiers).
           Toggle("Auto Select", isOn: Binding(get: { session.transformAutoSelect != held.contains(.command) },
@@ -40,7 +40,7 @@ struct TransformInspector: View {
                 Picker("Sampling", selection: Binding(get: { value.sampling }, set: { sampling in
                     change { $0.sampling = sampling }
                 })) {
-                    ForEach(LayerSampling.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(LayerSampling.allCases, id: \.self) { Text(zh($0.rawValue)).tag($0) }
                 }.frame(width: 170)
                 ToolHeaderPill(segmentWidth: 34) {
                     Button { change { $0.flipX.toggle() } } label: {
@@ -135,12 +135,12 @@ struct TransformValueField: View {
     @FocusState private var focused: Bool
     var body: some View {
         HStack(spacing: 4) {
-            Text(label).font(.caption).foregroundStyle(.secondary)
+            Text(zh(label)).font(.caption).foregroundStyle(.secondary)
                 .scrubbable(sensitivity: 1, value: Binding(get: { value }, set: { newValue in
                     change(newValue)
                     text = Self.formatted(Double(newValue))
                 }), range: range, step: 1, onEnd: finish)
-            TextField(label, text: $text)
+            TextField(zh(label), text: $text)
                 .textFieldStyle(.roundedBorder).focused($focused)
                 .frame(width: fieldWidth)
                 .accessibilityIdentifier("transform\(label)")
@@ -157,7 +157,7 @@ struct TransformValueField: View {
                                 change(CGFloat(stepped))
                                 text = Self.formatted(stepped)
                             })
-            if let suffix { Text(suffix).font(.caption).foregroundStyle(.secondary) }
+            if let suffix { Text(zh(suffix)).font(.caption).foregroundStyle(.secondary) }
         }
     }
     private func sync() { text = Self.formatted(Double(value)) }
@@ -206,6 +206,6 @@ private struct AlignButton: View {
         Button(action: action) {
             Image(systemName: symbol).font(.system(size: 15)).frame(width: 30, height: 28).contentShape(Rectangle())
         }
-        .buttonStyle(.borderless).help(title).accessibilityLabel(title)
+        .buttonStyle(.borderless).help(zh(title)).accessibilityLabel(zh(title))
     }
 }

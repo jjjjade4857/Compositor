@@ -34,10 +34,10 @@ struct GIFTimeline: View {
                 }
                 .buttonStyle(.plain)
                 .disabled(!canPlay)
-                .help(isPlaying ? "Pause" : "Play")
+                .help(zh(isPlaying ? "Pause" : "Play"))
                 // The delay as a menu of common ones, as the Layers panel's adjustment button offers its kinds.
                 Menu { delayMenu } label: {
-                    Text(timing.mode == .uniform ? "\(Int(delay.rounded()))ms" : originalDelays(spaced: false))
+                    Text(zh(timing.mode == .uniform ? "\(Int(delay.rounded()))ms" : originalDelays(spaced: false)))
                         .font(.system(size: 13)).foregroundStyle(.secondary)
                 }
                 .menuStyle(.button).buttonStyle(.plain).menuIndicator(.hidden).fixedSize()

@@ -1,0 +1,39 @@
+name: Chinese build
+on:
+  push:
+    branches: [zh-Hans]
+  pull_request:
+    branches: [zh-Hans]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check translation coverage
+        run: python3 scripts/audit-localization.py
+      - name: Generate bundle resources
+        run: python3 scripts/generate-localization.py
+      - name: Build Chinese edition
+        run: >-
+          xcodebuild build -project Compositor.xcodeproj -scheme Compositor
+          -configuration Release -destination 'platform=macOS,arch=arm64'
+          -derivedDataPath build/DerivedData CODE_SIGNING_ALLOWED=NO
+          PRODUCT_BUNDLE_IDENTIFIER=com.local.compositor.zhHans
+      - name: Verify resources and package
+        run: |
+          app=build/DerivedData/Build/Products/Release/Compositor.app
+          test -f "$app/Contents/Resources/zh-Hans.lproj/Localizable.strings"
+          test -f "$app/Contents/Resources/ChineseTranslations.json"
+          plutil -lint "$app/Contents/Resources/zh-Hans.lproj/Localizable.strings"
+          codesign --force --deep --sign - "$app"
+          codesign --verify --strict "$app"
+          ditto -c -k --sequesterRsrc --keepParent "$app" build/Compositor-zh-Hans.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Compositor-zh-Hans-${{ github.sha }}
+          path: build/Compositor-zh-Hans.zip
+          retention-days: 30

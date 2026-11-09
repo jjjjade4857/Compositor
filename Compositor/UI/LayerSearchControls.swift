@@ -120,8 +120,8 @@ struct LayersHeader: View {
                 searching.toggle()
             } label: { headerIcon(searching ? "xmark" : "magnifyingglass") }
                 .buttonStyle(.plain)
-                .help(searching ? "Close the search" : "Search layers by name")
-                .accessibilityLabel(searching ? "Close search" : "Search layers")
+                .help(zh(searching ? "Close the search" : "Search layers by name"))
+                .accessibilityLabel(zh(searching ? "Close search" : "Search layers"))
                 .accessibilityIdentifier("layerSearchButton")
             Button { isPresentingFilter.toggle() } label: {
                 headerIcon("line.3.horizontal.decrease", active: !session.layerTypeFilter.isEmpty)
@@ -162,12 +162,12 @@ struct LayersHeader: View {
     }
 
     private func typeToggle(_ kind: LayerType) -> some View {
-        Toggle(kind.titleKey, systemImage: kind.systemImageName, isOn: Binding(
+        Toggle(zh(kind.titleKey), systemImage: kind.systemImageName, isOn: Binding(
             get: { session.layerTypeFilter.contains(kind) },
             set: { on in if on { session.layerTypeFilter.insert(kind) } else { session.layerTypeFilter.remove(kind) } }
         ))
         .labelReservedIconWidth(16)
-        .accessibilityLabel(kind.filterLabel)
+        .accessibilityLabel(zh(kind.filterLabel))
         .accessibilityIdentifier(kind.accessibilityID)
     }
 }
