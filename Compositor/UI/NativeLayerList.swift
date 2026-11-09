@@ -1072,11 +1072,11 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
         // A reused cell must not carry another row's half-finished rename.
         if renaming, layerID != layer.id { restoreLabel() }
         if !renaming { nameLabel.stringValue = (layer.maskSourceID == nil ? "" : "↳ ") + layer.name }
-        dimensions.stringValue = layer.liveText != nil ? "Text · Double-click to edit" : layer.adjustment != nil ? "Adjustment · Double-click to edit" : layer.isGroup ? "Folder" : layer.sizeLabel
+        dimensions.stringValue = zh(layer.liveText != nil ? "Text · Double-click to edit" : layer.adjustment != nil ? "Adjustment · Double-click to edit" : layer.isGroup ? "Folder" : layer.sizeLabel)
         depthTag.text = layer.depthLabel ?? ""
         depthTag.toolTip = zh(layer.gifAnimation != nil ? "Animated GIF: select it to show its frames under the canvas"
-            : layer.asset?.isHDR == true ? "HDR layer: keeps light brighter than white, shown as white")
-            : "16-bit layer: keeps 16 bits a channel"
+            : layer.asset?.isHDR == true ? "HDR layer: keeps light brighter than white, shown as white"
+            : "16-bit layer: keeps 16 bits a channel")
         depthTag.isHidden = layer.depthLabel == nil || layer.maskSourceID != nil
         depthTagFits.isActive = !depthTag.isHidden
         if let source = layer.maskSourceID {
@@ -1085,7 +1085,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
             dimensions.toolTip = zh("Clipping mask based on \(sourceName). Option-click the bottom of its row to release.")
         } else { dimensions.toolTip = nil }
         eye.image = NSImage(systemSymbolName: layer.isVisible ? "eye" : "eye.slash", accessibilityDescription: nil)
-        eye.setAccessibilityLabel(zh("\(layer.isVisible ? "Hide" : "Show") \(layer.name)"))
+        eye.setAccessibilityLabel(zh(layer.isVisible ? "Hide" : "Show") + " " + layer.name)
         eye.isEnabled = enabled
         eye.layerID = layer.id
         eye.session = session
@@ -1262,7 +1262,7 @@ private final class LayerEffectRow: NSView, NSDraggingSource {
         toolTip = "Click to select; double-click to edit; Option-drag to copy " + kind.rawValue.lowercased()
         setAccessibilityElement(true)
         setAccessibilityRole(.group)
-        setAccessibilityLabel(kind.rawValue + " effect")
+        setAccessibilityLabel(zh(kind.rawValue) + " " + zh("effect"))
         updateSelection()
     }
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }

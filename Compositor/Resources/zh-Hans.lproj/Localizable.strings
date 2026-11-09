@@ -1341,6 +1341,8 @@
 "Link Mask…" = "链接蒙版…";
 "Link layer and mask so they move together" = "链接图层与蒙版，使其一起移动";
 "Link layer and mask so they move together…" = "链接图层与蒙版，使其一起移动…";
+"Link mask: %@" = "链接蒙版：%@";
+"Link mask: %@…" = "链接蒙版：%@…";
 "Linked" = "已链接";
 "Linked…" = "已链接…";
 "Liquify" = "液化";
@@ -1967,14 +1969,20 @@
 "Select everything except those colors, such as all but a green screen…" = "选择取样颜色以外的区域，例如排除绿幕背景…";
 "Select image pixels" = "选择图像像素";
 "Select image pixels…" = "选择图像像素…";
+"Select image: %@" = "选择图像：%@";
+"Select image: %@…" = "选择图像：%@…";
 "Select layer mask; Option-click to view it alone; Shift-click to enable/disable; Cmd-click to select its black areas (Cmd-Shift adds, Cmd-Option subtracts)" = "选择图层蒙版；Option 点击单独查看，Shift 点击启停，Command 点击选择黑色区域（加 Shift 添加，加 Option 减去）";
 "Select layer mask; Option-click to view it alone; Shift-click to enable/disable; Cmd-click to select its black areas (Cmd-Shift adds, Cmd-Option subtracts)…" = "选择图层蒙版；Option 点击单独查看，Shift 点击启停，Command 点击选择黑色区域（加 Shift 添加，加 Option 减去）…";
 "Select layer; Cmd-click to select its pixels (Cmd-Shift adds, Cmd-Option subtracts)" = "选择图层；Command 点击选择像素（加 Shift 添加，加 Option 减去）";
 "Select layer; Cmd-click to select its pixels (Cmd-Shift adds, Cmd-Option subtracts)…" = "选择图层；Command 点击选择像素（加 Shift 添加，加 Option 减去）…";
 "Select layers by clicking the canvas. Hold Command to turn it the other way while you click." = "点击画布选择图层，按住 Command 可临时切换自动选择状态。";
 "Select layers by clicking the canvas. Hold Command to turn it the other way while you click.…" = "点击画布选择图层，按住 Command 可临时切换自动选择状态。…";
+"Select mask: %@" = "选择蒙版：%@";
+"Select mask: %@…" = "选择蒙版：%@…";
 "Select only similar pixels connected to the one you click; off selects them everywhere" = "仅选择与取样点相连的相近像素，关闭后选择所有相近像素";
 "Select only similar pixels connected to the one you click; off selects them everywhere…" = "仅选择与取样点相连的相近像素，关闭后选择所有相近像素…";
+"Select text: %@" = "选择文字：%@";
+"Select text: %@…" = "选择文字：%@…";
 "Select this picked color." = "选择此取样颜色。";
 "Select this picked color.…" = "选择此取样颜色。…";
 "Select tool" = "选择工具";
@@ -2350,6 +2358,8 @@
 "Unlink Mask…" = "取消蒙版链接…";
 "Unlink layer and mask to move or transform them separately" = "取消图层与蒙版的链接，以单独移动或变换";
 "Unlink layer and mask to move or transform them separately…" = "取消图层与蒙版的链接，以单独移动或变换…";
+"Unlink mask: %@" = "取消链接蒙版：%@";
+"Unlink mask: %@…" = "取消链接蒙版：%@…";
 "Unsaved changes" = "未保存的更改";
 "Unsaved changes…" = "未保存的更改…";
 "Up to 256 colors · sRGB" = "最多 256 色 · sRGB";
@@ -2474,6 +2484,8 @@
 "Zoom…" = "缩放…";
 "[ ] size" = "[ ] 调整大小";
 "[ ] size…" = "[ ] 调整大小…";
+"effect" = "效果";
+"effect…" = "效果…";
 "pixels" = "像素";
 "pixels/inch" = "像素／英寸";
 "pixels/inch…" = "像素／英寸…";

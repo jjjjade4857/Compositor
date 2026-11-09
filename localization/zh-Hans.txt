@@ -1299,3 +1299,10 @@ Compositor Chinese Support|Compositor 中文支持
 Community fork with Chinese support. Updates are reviewed and built separately from upstream.|提供中文支持的社区分支。更新会在合并上游后单独审查与构建。
 
 Canvas text|画布文字
+
+Link mask: %@|链接蒙版：%@
+Unlink mask: %@|取消链接蒙版：%@
+Select mask: %@|选择蒙版：%@
+Select text: %@|选择文字：%@
+Select image: %@|选择图像：%@
+effect|效果
