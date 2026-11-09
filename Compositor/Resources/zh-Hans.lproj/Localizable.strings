@@ -1035,6 +1035,7 @@
 "Hexagon" = "六边形";
 "Hexagon…" = "六边形…";
 "Hex…" = "十六进制…";
+"Hide" = "隐藏";
 "Hide %@" = "隐藏 %@";
 "Hide %@ in the preview" = "在预览中隐藏 %@";
 "Hide %@ in the preview…" = "在预览中隐藏 %@…";
@@ -1051,6 +1052,7 @@
 "Hide Selection…" = "隐藏选区…";
 "Hide the background behind a layer mask, keeping the foreground subjects. The pixels stay, so the background can be painted back at any time." = "通过图层蒙版隐藏背景并保留主体，原始像素不变，可随时绘回背景。";
 "Hide the background behind a layer mask, keeping the foreground subjects. The pixels stay, so the background can be painted back at any time.…" = "通过图层蒙版隐藏背景并保留主体，原始像素不变，可随时绘回背景。…";
+"Hide…" = "隐藏…";
 "High" = "高";
 "High quality" = "高质量";
 "High quality…" = "高质量…";

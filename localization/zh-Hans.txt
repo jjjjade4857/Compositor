@@ -1306,3 +1306,5 @@ Select mask: %@|选择蒙版：%@
 Select text: %@|选择文字：%@
 Select image: %@|选择图像：%@
 effect|效果
+
+Hide|隐藏
