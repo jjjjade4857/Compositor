@@ -7,7 +7,7 @@ import os
 
 ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / "build/zh-Hans"
-BUILD.mkdir(exist_ok=True)
+BUILD.mkdir(parents=True, exist_ok=True)
 (BUILD / "localization").mkdir(exist_ok=True)
 SDK = "/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk"
 if not Path(SDK).is_dir():
