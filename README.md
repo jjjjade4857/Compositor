@@ -1,8 +1,28 @@
-# Compositor 简体中文版维护分支
+# Compositor 简体中文版（非官方）
 
-本 fork 提供经过中文界面复核的独立构建。中文安装包请从 [Chinese build 的最新成功运行](https://github.com/jjjjade4857/Compositor/actions/workflows/chinese.yml)下载，维护和构建步骤见 [中文版说明](README.zh-Hans.md)。本机统一入口为 `Compositor 中文版.app`。
+Mac 上的开源图像编辑器 [Compositor](https://github.com/robbietilton/Compositor) 的社区简体中文构建，基于上游 v1.6.6，MIT 许可，与上游作者无隶属关系。
 
-下面保留上游项目说明及署名；其中指向上游 release 的下载链接提供官方原版。
+[**下载最新版**](https://github.com/jjjjade4857/Compositor/releases/latest) · [反馈问题](https://github.com/jjjjade4857/Compositor/issues) · [使用教程](docs/使用指南/Compositor-中文版-详细使用教程.md) · [维护与构建](README.zh-Hans.md)
+
+![Compositor 中文版主界面](docs/images/zh-hans-main-window.png)
+
+## 安装
+
+1. 从 Releases 下载 `Compositor-简体中文版.zip` 并解压。
+2. 把 `Compositor 中文版.app` 拖进「应用程序」。
+3. 首次打开请**右键点图标 →「打开」**：本构建使用本地临时签名、未做 Apple 公证，直接双击会被 Gatekeeper 拦下。
+4. 系统要求：macOS 26 或更高，Apple 芯片。
+
+## 汉化范围
+
+- 菜单、工具栏、图层面板、混合模式、滤镜、Camera Raw、图层效果、快捷键设置、命令搜索等界面已汉化。
+- 工程格式、枚举值、快捷键定义、用户图层名、文件名与字体名保持原样；中文版保存的 `.comp` 与官方版互通。
+- 中文版停用官方 Sparkle 自动更新，避免汉化被覆盖；上游发新版后需重新合并构建，不会自动升级。
+- 动态拼接文案与系统错误可能仍显示英文，欢迎提词条。
+
+## 维护
+
+翻译源为 `localization/zh-Hans.txt`；构建、缺译审计与上游同步流程见 [中文版说明](README.zh-Hans.md)。
 
 ---
 
