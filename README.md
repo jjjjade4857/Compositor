@@ -1,3 +1,11 @@
+# Compositor 简体中文版维护分支
+
+本 fork 提供经过中文界面复核的独立构建。中文安装包请从 [Chinese build 的最新成功运行](https://github.com/jjjjade4857/Compositor/actions/workflows/chinese.yml)下载，维护和构建步骤见 [中文版说明](README.zh-Hans.md)。本机统一入口为 `Compositor 中文版.app`。
+
+下面保留上游项目说明及署名；其中指向上游 release 的下载链接提供官方原版。
+
+---
+
 # Compositor
 
 Adobe Photoshop costs too much and tools like GIMP don’t feel familiar enough for me to stay in flow. That’s why I built Compositor.

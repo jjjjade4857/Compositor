@@ -865,7 +865,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
     private var maskGap: NSLayoutConstraint!
     /// The chain symbol runs corner to corner; turned 45° counterclockwise it stands upright in a narrow gap.
     private static let linkImage: NSImage? = {
-        guard let symbol = NSImage(systemSymbolName: "link", accessibilityDescription: "Linked")?
+        guard let symbol = NSImage(systemSymbolName: "link", accessibilityDescription: zh("Linked"))?
             .withSymbolConfiguration(NSImage.SymbolConfiguration(pointSize: 10, weight: .medium)) else { return nil }
         let side = max(symbol.size.width, symbol.size.height)
         let image = NSImage(size: NSSize(width: ceil(side * 0.7), height: ceil(side * 1.45)), flipped: false) { rect in
@@ -1023,7 +1023,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
         // While the panel filters, folders list themselves opened; the chevron says so, and collapsing
         // waits until the filter is off (toggling now would change nothing the list shows).
         disclosure.isEnabled = enabled && !session.isFilteringLayers
-        disclosure.image = NSImage(systemSymbolName: session.isFilteringLayers || !session.collapsedGroupIDs.contains(layer.id) ? "chevron.down" : "chevron.right", accessibilityDescription: "Expand or collapse folder")
+        disclosure.image = NSImage(systemSymbolName: session.isFilteringLayers || !session.collapsedGroupIDs.contains(layer.id) ? "chevron.down" : "chevron.right", accessibilityDescription: zh("Expand or collapse folder"))
         // Pixel layers and masks show the whole canvas with their pixels where they sit, as Photoshop does;
         // editable text, adjustments and folders keep a square icon. Pictures redraw only when what they show changes.
         let canvas = session.document?.size ?? CGSize(width: 1, height: 1)
@@ -1065,7 +1065,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
         linkButton.setAccessibilityLabel(zh(layer.mask?.isLinked == false ? "Link mask: \(layer.name)" : "Unlink mask: \(layer.name)"))
         thumbnail.toolTip = zh(editableText ? "Editable text layer" : "Select image pixels")
         maskThumbnail.toolTip = zh("Select layer mask; Option-click to view it alone; Shift-click to enable/disable; Cmd-click to select its black areas (Cmd-Shift adds, Cmd-Option subtracts)")
-        thumbnail.setAccessibilityLabel(zh("Select \(editableText ? "text" : "image"): \(layer.name)"))
+        thumbnail.setAccessibilityLabel(zh(editableText ? "Select text: \(layer.name)" : "Select image: \(layer.name)"))
         maskThumbnail.setAccessibilityLabel(zh("Select mask: \(layer.name)"))
         updateTarget()
         layerName = layer.name
@@ -1081,7 +1081,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
         depthTagFits.isActive = !depthTag.isHidden
         if let source = layer.maskSourceID {
             let sourceName = session.document?.layers.first(where: { $0.id == source })?.name ?? "Missing source"
-            dimensions.stringValue = "Clipped to \(sourceName)"
+            dimensions.stringValue = zh("Clipped to \(sourceName)")
             dimensions.toolTip = zh("Clipping mask based on \(sourceName). Option-click the bottom of its row to release.")
         } else { dimensions.toolTip = nil }
         eye.image = NSImage(systemSymbolName: layer.isVisible ? "eye" : "eye.slash", accessibilityDescription: nil)
@@ -1102,7 +1102,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
         if let layer = session?.document?.layers.first(where: { $0.id == layerID }),
            let sourceID = layer.maskSourceID,
            let source = session?.document?.layers.first(where: { $0.id == sourceID }) {
-            dimensions.stringValue = "Clipped to \(source.name)"
+            dimensions.stringValue = zh("Clipped to \(source.name)")
             dimensions.toolTip = zh("Clipping mask based on \(source.name). Option-click the bottom of its row to release.")
         }
         let active = session?.activeLayerID == layerID && session?.selectedLayerIDs.count == 1
@@ -1194,7 +1194,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
     private static var adjustmentIcons: [String: NSImage] = [:]
     /// The folder symbol at 80% of the size it would fill the thumbnail slot with.
     private static let folderIcon: NSImage? = {
-        guard let symbol = NSImage(systemSymbolName: "folder", accessibilityDescription: "Folder") else { return nil }
+        guard let symbol = NSImage(systemSymbolName: "folder", accessibilityDescription: zh("Folder")) else { return nil }
         let fit = 36 * 0.8 / max(symbol.size.width, symbol.size.height)
         let size = NSSize(width: symbol.size.width * fit, height: symbol.size.height * fit)
         let icon = NSImage(size: NSSize(width: 36, height: 36), flipped: false) { bounds in
@@ -1207,7 +1207,7 @@ private final class LayerCell: NSTableCellView, NSTextFieldDelegate {
     }()
     private static func adjustmentIcon(_ symbolName: String, description: String, quarterTurnClockwise: Bool = false) -> NSImage? {
         if let icon = adjustmentIcons[symbolName] { return icon }
-        guard let symbol = NSImage(systemSymbolName: symbolName, accessibilityDescription: description) else { return nil }
+        guard let symbol = NSImage(systemSymbolName: symbolName, accessibilityDescription: zh(description)) else { return nil }
         let size = NSSize(width: symbol.size.width * 1.21, height: symbol.size.height * 1.21)
         let icon = NSImage(size: NSSize(width: 36, height: 36), flipped: false) { bounds in
             let transform = NSAffineTransform()
@@ -1235,7 +1235,7 @@ private final class LayerEffectRow: NSView, NSDraggingSource {
     private let label: NSTextField
     init(session: EditorSession, layerID: UUID, kind: LayerEffectKind, enabled: Bool, indent: CGFloat) {
         self.session = session; self.layerID = layerID; self.kind = kind
-        label = NSTextField(labelWithString: kind.rawValue)
+        label = NSTextField(labelWithString: zh(kind.rawValue))
         super.init(frame: .zero)
         wantsLayer = true
         translatesAutoresizingMaskIntoConstraints = false
@@ -1259,7 +1259,7 @@ private final class LayerEffectRow: NSView, NSDraggingSource {
             label.centerYAnchor.constraint(equalTo: centerYAnchor),
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
-        toolTip = "Click to select; double-click to edit; Option-drag to copy " + kind.rawValue.lowercased()
+        toolTip = zh("Click to select; double-click to edit; Option-drag to copy ") + zh(kind.rawValue)
         setAccessibilityElement(true)
         setAccessibilityRole(.group)
         setAccessibilityLabel(zh(kind.rawValue) + " " + zh("effect"))

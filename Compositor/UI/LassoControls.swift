@@ -138,7 +138,7 @@ struct LassoControls: View {
                         SelectionModifyIcon(operation: operation).frame(width: 14, height: 14)
                     }
                     .accessibilityLabel(zh(operation.rawValue))
-                    .help("\(operation.rawValue) the selection by this many pixels")
+                    .help("\(zh(operation.rawValue)) the selection by this many pixels")
                 }
             }
         }

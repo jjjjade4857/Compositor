@@ -331,8 +331,8 @@ struct CameraRawControls: View {
         }
         .buttonStyle(.borderless)
         .disabled(session.filterEdit?.committing == true)
-        .help("Reset \(group.rawValue) to its defaults")
-        .accessibilityLabel("Reset \(group.rawValue)")
+        .help("Reset \(zh(group.rawValue)) to its defaults")
+        .accessibilityLabel("Reset \(zh(group.rawValue))")
     }
 
     private func slider(_ title: String, _ key: WritableKeyPath<CameraRawSettings, Double>, range: ClosedRange<Double>,

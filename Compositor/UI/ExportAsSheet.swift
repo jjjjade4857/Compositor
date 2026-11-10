@@ -388,7 +388,7 @@ struct ExportAsSheet: View {
     private func loadProfile() {
         let panel = NSOpenPanel()
         panel.allowedContentTypes = [UTType(filenameExtension: "icc") ?? .data, UTType(filenameExtension: "icm") ?? .data]
-        panel.message = "Choose a CMYK ICC profile, such as the one your printer gave you"
+        panel.message = zh("Choose a CMYK ICC profile, such as the one your printer gave you")
         guard panel.runModal() == .OK, let url = panel.url else { return }
         do { session.proofProfile = try CMYK.load(url) }
         catch { self.error = error.localizedDescription }
@@ -406,7 +406,7 @@ struct ExportAsSheet: View {
             .pickerStyle(.inline).labelsHidden()
         }
         .menuStyle(.button).fixedSize()
-        .help("Other formats: TIFF, PDF and GIF\(others.contains(.exr) ? ", EXR to keep light brighter than white" : ""), and Channel Pack for game textures")
+        .help(others.contains(.exr) ? zh("Other formats: TIFF, PDF, GIF and EXR for highlights, plus Channel Pack for game textures") : zh("Other formats: TIFF, PDF and GIF, plus Channel Pack for game textures"))
         if chosen { menu.buttonStyle(.borderedProminent) } else { menu.buttonStyle(.bordered) }
     }
 
@@ -422,7 +422,7 @@ struct ExportAsSheet: View {
             }
         }
         .labelsHidden().frame(width: 260)
-        .help("What fills the \(channel.rawValue.lowercased()) channel: a layer or group read as grayscale, or solid black or white")
+        .help("What fills the \(zh(channel.rawValue)) channel: a layer or group read as grayscale, or solid black or white")
     }
 
     private func sizeField(_ value: Int, set: @escaping (Int) -> Void) -> some View {

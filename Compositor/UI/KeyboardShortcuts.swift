@@ -207,7 +207,7 @@ final class ShortcutSettings {
             if [ShortcutChord("q", 1), ShortcutChord(",", 1), ShortcutChord("m", 3)].contains(chord) {
                 return "\(chord.label) is reserved by macOS."
             }
-            if let other = assigned[chord] { return "\(chord.label) is assigned to both \(other) and \(definition.title)." }
+            if let other = assigned[chord] { return "\(chord.label) is assigned to both \(zh(other)) and \(zh(definition.title))." }
             assigned[chord] = definition.title
         }
         return nil
@@ -336,8 +336,8 @@ private struct ShortcutRecorder: NSViewRepresentable {
     func makeNSView(context: Context) -> RecorderButton { RecorderButton() }
     func updateNSView(_ button: RecorderButton, context: Context) {
         button.start = start; button.finish = finish; button.recording = recording
-        button.title = recording ? zh("Press keys…") : chord.label
-        button.setAccessibilityLabel(recording ? zh("Press a shortcut") : chord.label)
+        button.title = recording ? zh("Press keys…") : (chord.isNone ? zh("Unassigned") : chord.label)
+        button.setAccessibilityLabel(recording ? zh("Press a shortcut") : (chord.isNone ? zh("Unassigned") : chord.label))
         if recording, button.window?.firstResponder !== button { button.window?.makeFirstResponder(button) }
     }
     final class RecorderButton: NSButton {

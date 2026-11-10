@@ -10,6 +10,13 @@ import UniformTypeIdentifiers
     /// Shown until the project is saved: Untitled, the opened file's name, or a Photoshop artboard's.
     var defaultName: String
     var title: String { session.projectURL?.deletingPathExtension().lastPathComponent ?? defaultName }
+    /// Localize only generated untitled names, never image names or user-supplied file names.
+    var displayTitle: String {
+        if session.projectURL != nil { return title }
+        if let source = session.sourceImageURL,
+           defaultName == source.deletingPathExtension().lastPathComponent { return title }
+        return zh(defaultName)
+    }
     init(name: String) {
         defaultName = name
         session = EditorSession()

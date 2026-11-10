@@ -575,7 +575,7 @@ struct FilterSheet: View {
                             range: range)
             if let track {
                 CameraRawSlider(value: settings[keyPath: key], range: range, track: track,
-                                help: "\(title). Double-click to reset.",
+                                help: "\(zh(title)). Double-click to reset.",
                                 onChange: { value in update { $0[keyPath: key] = (value * step).rounded() / step } },
                                 onReset: reset)
             } else {
@@ -623,8 +623,8 @@ struct GradientMapControls: View {
                 ColorSwatch(color: color(value))
             }
             .buttonStyle(.plain)
-            .help("Choose the \(title.lowercased()) color")
-            .accessibilityLabel("\(title) color")
+            .help("Choose the \(zh(title)) color")
+            .accessibilityLabel("\(zh(title)) color")
             Text(zh(title))
         }
     }

@@ -7,7 +7,7 @@ class MaintenanceTests(unittest.TestCase):
  def sync(self, *, existing=True, pr='', network_failure=False):
   with tempfile.TemporaryDirectory() as folder:
    root=Path(folder);binpath=root/'bin';binpath.mkdir();(root/'scripts').mkdir()
-   for name in ['generate-localization.py','audit-localization.py']:(root/'scripts'/name).write_text('pass\n')
+   for name in ['generate-localization.py','audit-localization.py','review-localization.py']:(root/'scripts'/name).write_text('pass\n')
    mock='''#!/usr/bin/env python3
 import os,sys
 from pathlib import Path
@@ -42,5 +42,29 @@ else:
    (root/'localization/zh-Hans.txt').write_text('File %@ has %d layers|Only %@\n')
    result=subprocess.run(['python3',str(script)],capture_output=True,text=True)
    self.assertNotEqual(result.returncode,0);self.assertIn('Placeholder mismatch',result.stderr)
+
+class LocalizationAuditTests(unittest.TestCase):
+ def audit(self, source, translations):
+  import json
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'scripts').mkdir();(root/'localization').mkdir();(root/'Compositor/UI').mkdir(parents=True)
+   for name in ['review-localization.py','swift_strings.py']:(root/'scripts'/name).write_bytes((ROOT/'scripts'/name).read_bytes())
+   (root/'Compositor/UI/Fixture.swift').write_text(source)
+   (root/'localization/zh-Hans.txt').write_text(translations)
+   (root/'localization/reviewed-exceptions.json').write_text('{}')
+   result=subprocess.run(['python3',str(root/'scripts/review-localization.py')],capture_output=True,text=True)
+   return result.returncode,json.loads((root/'localization/full-audit-report.json').read_text())
+ def test_custom_control_parameters_are_not_silently_ignored(self):
+  code,report=self.audit('control("Offset", help: "Smooths colored speckles.")','')
+  self.assertNotEqual(code,0);self.assertIn('Offset',report['untranslated_literals']);self.assertIn('Smooths colored speckles.',report['untranslated_literals'])
+ def test_localized_dictionary_does_not_hide_native_display_bypass(self):
+  code,report=self.audit('let label = NSTextField(labelWithString: kind.rawValue)','Gaussian Blur|高斯模糊\n')
+  self.assertNotEqual(code,0);self.assertTrue(report['unlocalized_display_boundaries'])
+ def test_raw_enum_interpolation_in_button_is_rejected(self):
+  code,report=self.audit('Button("\\(kind.rawValue)…") {}','Gaussian Blur|高斯模糊\n')
+  self.assertNotEqual(code,0);self.assertTrue(report['unlocalized_display_boundaries'])
+ def test_properly_localized_control_passes(self):
+  code,report=self.audit('Text(zh("Offset"))','Offset|偏移\n')
+  self.assertEqual(code,0);self.assertFalse(report['untranslated_literals'])
 
 if __name__=='__main__':unittest.main()

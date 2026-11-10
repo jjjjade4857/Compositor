@@ -1308,3 +1308,277 @@ Select image: %@|选择图像：%@
 effect|效果
 
 Hide|隐藏
+
+Untitled|未命名
+ Selection|选区
+Selection %@ × %@ px|选区 %@ × %@ 像素
+ · Feather %@ px| · 羽化 %@ 像素
+Offset|偏移
+Preserve Details|保留细节
+Color Noise|彩色噪点
+Remove Distortion|移除畸变
+Choose the dark color|选择暗部颜色
+Choose the light color|选择亮部颜色
+Displace|置换
+Choose the screen's color|选择网屏颜色
+Choose the lines' color|选择线条颜色
+Haze|雾化
+Intensity|强度
+Shafts|光柱
+Light %@|光源 %@
+ color|颜色
+Distribute |分布
+Refine Saturation|优化饱和度
+Show the image again (or Option-click the mask thumbnail)|重新显示图像（也可按住 Option 点击蒙版缩略图）
+Hide the gamut warning|隐藏色域警告
+Stop marking colors the profile can't print|停止标记当前色彩配置无法印出的颜色
+Stop proofing|停止软打样
+Show the document's own colors again|恢复显示文档本身的颜色
+CMYK Proof|CMYK 软打样
+Encoding frame %@ of %@…|正在编码第 %@ 帧，共 %@ 帧…
+1 more tab|另有 1 个标签页
+%@ more tabs|另有 %@ 个标签页
+Add to %@|添加至 %@
+%@ canvas|%@画布
+Left Edges|左边缘
+Horizontal Centers|水平居中
+Right Edges|右边缘
+Top Edges|上边缘
+Vertical Centers|垂直居中
+Bottom Edges|下边缘
+Horizontal Spacing|水平间距
+Vertical Spacing|垂直间距
+Purple|紫色
+Remove|移除
+Export Layer as PNG|将图层导出为 PNG
+Export %@ Layers as PNGs|将 %@ 个图层导出为 PNG
+Export|导出
+Replace|替换
+Couldn’t export layers|无法导出图层
+“%@” has nothing to export|“%@”没有可导出的内容
+%@ layers have nothing to export|%@ 个图层没有可导出的内容
+Open one project at a time|一次只能打开一个工程
+Click to select; double-click to edit; Option-drag to copy |点击选择；双击编辑；按住 Option 拖动可复制
+%@ degrees|%@ 度
+In %@   Out %@|输入 %@   输出 %@
+Input %@ · Output %@|输入 %@ · 输出 %@
+Result: %@ × %@ pixels|结果：%@ × %@ 像素
+Current: %@ × %@ pixels|当前：%@ × %@ 像素
+New: %@ × %@ pixels · %@ uncompressed|新建：%@ × %@ 像素 · 未压缩 %@
+Frame %@|第 %@ 帧
+%@ ms · %@ fps|%@ 毫秒 · %@ 帧/秒
+%@ × %@ in at %@ DPI|%@ × %@ 英寸，%@ DPI
+ · %@ DPI: %@ × %@ pixels| · %@ DPI：%@ × %@ 像素
+Opacity digit %@ (type two for exact %)|不透明度数字 %@（连续输入两位数字可设置精确百分比）
+Nudge %@ 1 px|向%@微移 1 像素
+Nudge %@ 10 px|向%@微移 10 像素
+Move selected pixels %@ 1 px|将所选像素向%@移动 1 像素
+Move selected pixels %@ 10 px|将所选像素向%@移动 10 像素
+Down|下
+Layer %@|图层 %@
+Folder %@|图层组 %@
+Untitled %@|未命名 %@
+Layer 1|图层 1
+Fill Text|填充文字
+Split Channels|拆分通道
+Layer Opacity|图层不透明度
+Distort|扭曲
+Distort Layers|扭曲多个图层
+Adjustment input|调整输入
+Edit %@ Adjustment|编辑%@调整
+Copy Layers from Project|从工程复制图层
+Cancel |取消
+Copy |复制
+Gradient Mask|渐变蒙版
+Pasted Image|粘贴的图像
+ copy| 副本
+Color Picker (%@ Color)|拾色器（%@颜色）
+Color Picker (Light %@)|拾色器（光源 %@）
+Color Picker (%@)|拾色器（%@）
+New %@ Adjustment|新建%@调整
+Distort Layer Mask|扭曲图层蒙版
+Floating Selection|浮动选区
+Zoom out|缩小
+Zoom in|放大
+Open “%@”?|打开“%@”？
+Couldn’t read GIF frame %@: %@|无法读取 GIF 第 %@ 帧：%@
+Page %@|第 %@ 页
+%@. Double-click to reset.|%@。双击可重置。
+Drag an ellipse · Shift add · Option subtract · Shift again mid-drag circle · Drag inside to move · Delete clears · ⌘D deselect|拖动绘制椭圆 · Shift 添加 · Option 减去 · 拖动时再次按 Shift 绘制正圆 · 拖动选区内部可移动 · Delete 清除 · ⌘D 取消选择
+Drag a rectangle · Shift add · Option subtract · Shift again mid-drag square · Drag inside to move · ⌘-drag moves pixels · Delete clears · ⌘D deselect|拖动绘制矩形 · Shift 添加 · Option 减去 · 拖动时再次按 Shift 绘制正方形 · 拖动选区内部可移动 · 按住 ⌘ 拖动可移动像素 · Delete 清除 · ⌘D 取消选择
+Click an object to select its outline · Tab for Wand · Shift add · Option subtract · Drag inside to move · ⌘-drag moves pixels · Delete clears · ⌘D deselect|点击对象选择轮廓 · Tab 切换魔棒 · Shift 添加 · Option 减去 · 拖动选区内部可移动 · 按住 ⌘ 拖动可移动像素 · Delete 清除 · ⌘D 取消选择
+Click to select similar colors · Tab for Object · Shift add · Option subtract · Drag inside to move · ⌘-drag moves pixels · Delete clears · ⌘D deselect|点击选择相似颜色 · Tab 切换对象选择 · Shift 添加 · Option 减去 · 拖动选区内部可移动 · 按住 ⌘ 拖动可移动像素 · Delete 清除 · ⌘D 取消选择
+Click corners · Click start, double-click or Enter to close · Delete removes corner · Escape cancel|点击添加拐点 · 点击起点、双击或按 Enter 闭合 · Delete 移除拐点 · Esc 取消
+ · [ ] size · Shift-[ ] hardness · 1–0 opacity · Escape cancel · Space to pan| · [ ] 调整大小 · Shift-[ ] 调整硬度 · 1–0 设置不透明度 · Esc 取消 · 按住空格平移
+ · [ ] size · Shift-[ ] hardness · 1–0 strength · Space to pan| · [ ] 调整大小 · Shift-[ ] 调整硬度 · 1–0 设置强度 · 按住空格平移
+Option-click to set the source · Drag to clone · [ ] size · Shift-[ ] hardness · 1–0 opacity · Space to pan|按住 Option 点击设置取样源 · 拖动仿制 · [ ] 调整大小 · Shift-[ ] 调整硬度 · 1–0 设置不透明度 · 按住空格平移
+Drag over blemishes to heal · [ ] size · Shift-[ ] hardness · Escape cancel · Space to pan|在瑕疵上拖动进行修复 · [ ] 调整大小 · Shift-[ ] 调整硬度 · Esc 取消 · 按住空格平移
+Drag a text box · Click text to edit · Drag box handles to resize · ⌘Return finish · Escape cancel|拖动创建文字框 · 点击文字编辑 · 拖动框柄调整大小 · ⌘Return 完成 · Esc 取消
+Drag to draw a shape on a new layer · Shift %@ · Option from center · Shift-U or Tab for the next shape · Escape cancel · Space to pan|拖动在新图层上绘制形状 · Shift %@ · Option 从中心绘制 · Shift-U 或 Tab 切换形状 · Esc 取消 · 按住空格平移
+Drag to draw · Drag ends to adjust · Shift 45° · 1–0 opacity · Enter apply · Escape cancel|拖动绘制 · 拖动端点调整 · Shift 限制为 45° · 1–0 设置不透明度 · Enter 应用 · Esc 取消
+Drag to crop · Enter apply · Escape cancel · Space to pan|拖动裁剪 · Enter 应用 · Esc 取消 · 按住空格平移
+Drag to move · Handles to resize · Circle to rotate · 1–0 layer opacity · Space to pan|拖动移动 · 拖动控制柄缩放 · 拖动圆柄旋转 · 1–0 设置图层不透明度 · 按住空格平移
+Drag to pan · Pinch to zoom|拖动平移 · 双指捏合缩放
+No tool selected · Press a tool's key to pick one · Space to pan|尚未选择工具 · 按工具快捷键选择 · 按住空格平移
+Click to zoom in · Option-click to zoom out · Drag right or left to zoom smoothly · Space to pan|点击放大 · 按住 Option 点击缩小 · 左右拖动平滑缩放 · 按住空格平移
+
+square|正方形
+circle|正圆
+
+
+Drag to select · Drag inside to move · Shift add · Option subtract · Delete clears · ⌥⌫/⌘⌫ fill · ⌘D deselect|拖动创建选区 · 拖动选区内部可移动 · Shift 添加 · Option 减去 · Delete 清除 · ⌥⌫/⌘⌫ 填充 · ⌘D 取消选择
+Text-editing shortcuts need Command, Option, or Control so they do not replace normal typing.|文字编辑快捷键必须包含 Command、Option 或 Control，以免影响正常输入。
+%@ is reserved by macOS.|%@ 是 macOS 保留的快捷键。
+%@ is assigned to both %@ and %@.|%@ 同时分配给了“%@”和“%@”。
+Cyan / Red|青色／红色
+Magenta / Green|洋红／绿色
+Yellow / Blue|黄色／蓝色
+Lifts or lowers the brightest tones.|提高或降低最亮部分的亮度。
+Lifts or lowers the light tones.|提高或降低亮部的亮度。
+Lifts or lowers the dark tones.|提高或降低暗部的亮度。
+Lifts or lowers the darkest tones.|提高或降低最暗部分的亮度。
+How much the curve also changes color strength. Zero matches Photoshop; lower keeps it to brightness, higher adds more color.|控制曲线对颜色强度的影响。零与 Photoshop 一致；降低时主要影响亮度，提高时增强颜色。
+Drag on the picture to move the curve for the tone under the pointer.|在图像上拖动可调整指针所在色调对应的曲线。
+Shifts the selected color family around the wheel.|沿色轮移动所选颜色组的色相。
+Makes the selected color family stronger or quieter.|增强或减弱所选颜色组的饱和度。
+Makes the selected color family lighter or darker.|使所选颜色组变亮或变暗。
+Shifts the picked color around the color wheel.|沿色轮移动取样颜色的色相。
+Makes the picked color stronger or quieter.|增强或减弱取样颜色的饱和度。
+Makes the picked color lighter or darker.|使取样颜色变亮或变暗。
+How far in hue the adjustment reaches.|调整影响的色相范围。
+How far in saturation the adjustment reaches.|调整影响的饱和度范围。
+How far in brightness the adjustment reaches.|调整影响的亮度范围。
+Controls how much the three tonal wheels overlap.|控制三个色调色轮之间的重叠程度。
+Shifts the wheels toward shadows or highlights.|将色轮的作用范围向阴影或高光移动。
+Brightness added by this wheel.|此色轮增加的亮度。
+Straightens vertical lines toward the center.|向中心校正垂直线条。
+Straightens horizontal lines toward the center.|向中心校正水平线条。
+Rotates the picture around its center.|围绕图像中心旋转。
+Stretches width relative to height.|调整宽度相对于高度的拉伸程度。
+Zooms the transformed picture within the frame.|在画框内缩放变换后的图像。
+Moves the picture left or right.|向左或向右移动图像。
+Moves the picture up or down.|向上或向下移动图像。
+Adds green or magenta to the darkest tones.|为最暗部分添加绿色或洋红色。
+Shifts how red is interpreted.|调整红色原色的色相解释方式。
+Strengthens or weakens the red primary.|增强或减弱红色原色。
+Shifts how green is interpreted.|调整绿色原色的色相解释方式。
+Strengthens or weakens the green primary.|增强或减弱绿色原色。
+Shifts how blue is interpreted.|调整蓝色原色的色相解释方式。
+Strengthens or weakens the blue primary.|增强或减弱蓝色原色。
+Brightens or darkens the whole picture, in stops of light. Hold Option to see clipped highlights.|以曝光档数为单位调整整幅图像的亮度。按住 Option 可查看高光溢出。
+Makes light and dark tones more or less different, mostly around the middle.|主要在中间调范围内增强或减弱明暗差异。
+Adjusts the bright parts of the picture. Hold Option to see clipped highlights.|调整图像亮部。按住 Option 可查看高光溢出。
+Adjusts the dark parts of the picture. Hold Option to see clipped shadows.|调整图像暗部。按住 Option 可查看阴影溢出。
+Sets the brightest point. Hold Option to see clipped highlights.|设置白场。按住 Option 可查看高光溢出。
+Sets the darkest point. Hold Option to see clipped shadows.|设置黑场。按住 Option 可查看阴影溢出。
+Shifts the picture from blue to yellow.|在蓝色与黄色之间调整图像色温。
+Shifts the picture from green to mauve.|在绿色与洋红色之间调整图像色调。
+Strengthens quiet colors more than colors that are already strong, and protects skin tones.|优先增强低饱和度颜色，并保护肤色。
+Strengthens or weakens every color by the same amount.|以相同程度增强或减弱所有颜色的饱和度。
+Adds or softens small detail.|增强或柔化细小细节。
+Adds or softens contrast along broader shapes.|增强或柔化较大轮廓的局部对比度。
+Clears haze when raised, and adds haze when lowered.|提高时去除薄雾，降低时增加薄雾。
+Spreads a glow from the bright areas.|从亮部向外扩散辉光。
+Chooses how bright an area must be to glow. Has no effect until Glow is raised.|设置产生辉光的亮度阈值。提高辉光强度后才会生效。
+Sets how far the glow reaches. Has no effect until Glow is raised.|设置辉光扩散范围。提高辉光强度后才会生效。
+Shifts the glow from cool to warm. Halation stays red. Has no effect until Glow is raised.|在冷色与暖色之间调整辉光，光晕保持红色。提高辉光强度后才会生效。
+Darkens or lightens the edges. The center does not change.|压暗或提亮图像边缘，中心保持不变。
+Sets where the vignette begins, from the center outward.|设置暗角从中心向外开始作用的位置。
+Makes the vignette rounder or more square.|调整暗角轮廓，使其更圆或更接近方形。
+Softens the edge of the vignette.|柔化暗角边缘。
+Protects bright pixels while a dark vignette is applied. Used by Highlight Priority.|添加暗角时保护高光像素，适用于高光优先模式。
+Adds film grain, strongest in the middle tones.|添加胶片颗粒，中间调中的效果最强。
+Makes the grain coarser or finer.|调整颗粒的粗细。
+Makes the grain smoother or more uneven.|调整颗粒的平滑或不均匀程度。
+Zoom in (⌘+), now %@. At 100% each pixel of the export is one pixel of the screen|放大（⌘+），当前 %@。100% 时导出图像的一个像素对应屏幕的一个像素
+Move / Transform|移动／变换
+Use gridlines every %@–%@ pixels and %@–%@ subdivisions, no more than the pixels between gridlines.|网格线间距为 %@–%@ 像素，细分数量为 %@–%@，且不能超过网格线之间的像素数。
+Enter a whole number from 1 to %@ px.|请输入 1 到 %@ 像素之间的整数。
+Use 1–%@ pixels per side, up to %@ megapixels, and 1–9,600 pixels/inch.|每边支持 1–%@ 像素，总计不超过 %@ 百万像素，分辨率为 1–9,600 像素／英寸。
+Controls how strong the sharpening is.|控制锐化强度。
+How far from each edge the sharpening reaches, in pixels.|锐化从边缘向外影响的像素范围。
+Emphasizes fine texture over broader edges.|相对于较宽的边缘，更强调细微纹理。
+Limits sharpening to stronger edges. Hold Option to see the mask.|将锐化限制在较明显的边缘。按住 Option 可查看蒙版。
+Smooths grain and noise in brightness.|平滑亮度中的颗粒与噪点。
+Preserves fine texture while luminance noise is reduced.|降低亮度噪点时保留细微纹理。
+Keeps local contrast after luminance smoothing.|平滑亮度后保留局部对比度。
+Smooths colored speckles.|平滑彩色噪点。
+Preserves colored edges while color noise is reduced.|降低彩色噪点时保留彩色边缘。
+Makes the color smoothing softer or tighter.|调整颜色平滑的柔和或紧致程度。
+How much of the profile distortion correction is applied.|设置镜头配置文件的畸变校正强度。
+How much of the profile vignetting correction is applied.|设置镜头配置文件的暗角校正强度。
+Straightens barrel or pincushion bending.|校正桶形或枕形畸变。
+Weakens purple fringes inside the purple hue range.|减弱紫色色相范围内的紫边。
+Hue range where purple defringe runs.|去紫边功能作用的色相范围。
+Weakens green fringes inside the green hue range.|减弱绿色色相范围内的绿边。
+Hue range where green defringe runs.|去绿边功能作用的色相范围。
+Brightens or darkens the corners to counter lens falloff.|提亮或压暗四角，以补偿镜头失光。
+Moves the vignette correction inward or outward.|向内或向外移动暗角校正范围。
+Choose a folder for the layers’ PNGs.|选择保存图层 PNG 文件的文件夹。
+“%@” already exists. Replace it?|“%@”已存在。是否替换？
+%@ of these files already exist in “%@”. Replace them?|其中 %@ 个文件已存在于“%@”中。是否替换？
+A layer with no visible pixels, such as an adjustment layer, isn’t saved as a PNG.|调整图层等不包含可见像素的图层不会保存为 PNG。
+Some dropped items couldn’t be read. Drag JPEG, PNG, GIF, HEIC, HEIF, TIFF, WebP, PDF, or Photoshop (PSD) files from Finder.|部分拖入的项目无法读取。请从访达拖入 JPEG、PNG、GIF、HEIC、HEIF、TIFF、WebP、PDF 或 Photoshop（PSD）文件。
+This project uses format version %@. This app supports versions 1–%@ and 27.|此工程使用格式版本 %@。本应用支持版本 1–%@ 和 27。
+This project exceeds the supported canvas, layer, file-size, or %@-megapixel document limit.|此工程超过了支持的画布、图层、文件大小或 %@ 百万像素文档限制。
+Choose a JPEG, PNG, GIF, HEIC, HEIF, TIFF, WebP, PDF, or Photoshop (PSD) file.|请选择 JPEG、PNG、GIF、HEIC、HEIF、TIFF、WebP、PDF 或 Photoshop（PSD）文件。
+This import exceeds the current %@-megapixel document budget or %@-pixel side limit.|本次导入超过当前文档的 %@ 百万像素总量或 %@ 像素边长限制。
+This animation has more than %@ frames, which exceeds the current timeline limit.|此动画超过 %@ 帧，超出了当前时间轴限制。
+Animation export supports up to %@ frames, %@ megapixels across all exported frames, and 512 MiB of encoded data. Reduce the export size or frame count.|动画导出最多支持 %@ 帧，全部导出帧合计不超过 %@ 百万像素，编码数据不超过 512 MiB。请缩小导出尺寸或减少帧数。
+Image export supports canvases up to %@ megapixels and %@ pixels per side.|图像导出支持最多 %@ 百万像素、每边最多 %@ 像素的画布。
+Cropped to the canvas so the file fits in memory. Pixels outside the canvas weren't imported.|为使文件适合内存容量，已裁切到画布范围。画布外的像素未被导入。
+Folder blend mode “%@” isn’t supported. The folder will be pass-through.|不支持图层组混合模式“%@”。该图层组将使用穿透模式。
+Blend mode “%@” isn’t supported and will be applied as Normal.|不支持混合模式“%@”，将按正常模式应用。
+The font “%@” isn’t installed, so the text was drawn with the system font.|尚未安装字体“%@”，文字已使用系统字体绘制。
+“%@” has no images to import.|“%@”中没有可导入的图像。
+That text box exceeds the %@-pixel or %@-megapixel limit.|此文字框超过 %@ 像素或 %@ 百万像素的限制。
+Earliest response. Hue, saturation, and shadow tint move about half as far as Version 6.|最早的处理方式。色相、饱和度和阴影色调的变化幅度约为版本 6 的一半。
+A little stronger than Version 1. The sliders below still fall well short of the current look.|比版本 1 略强。下方滑块的作用强度仍明显低于当前版本。
+Firmer color than Version 2. Primary shifts stay gentler than the current process.|颜色比版本 2 更强，原色偏移仍比当前处理方式柔和。
+The 2012 response. Calibration reaches most of the strength used by Version 6.|2012 年的处理方式。校准强度接近版本 6 的大部分范围。
+Close to the current process, with slightly softer primary and shadow shifts.|接近当前处理方式，但原色与阴影偏移略为柔和。
+Current default. The calibration sliders below apply at full strength.|当前默认处理方式。下方校准滑块按完整强度应用。
+“%@” is a folder, which has no pixels of its own. Paint on a layer inside it, or on the folder’s mask.|“%@”是图层组，本身不包含像素。请在其中的图层或图层组蒙版上绘制。
+“%@” is hidden, or inside a hidden folder. Show it to paint on it.|“%@”已隐藏，或位于隐藏的图层组内。请先显示它再绘制。
+“%@” is an adjustment layer, with no pixels to paint. Paint on its mask instead.|“%@”是调整图层，没有可绘制的像素。请改为在其蒙版上绘制。
+Nothing is selected, so there’s nowhere to paint. Choose Select › Deselect (⌘D) to paint anywhere.|当前选区为空，没有可绘制的位置。请选择“选择 › 取消选择”（⌘D），即可在任意位置绘制。
+That shape is too large. A shape can cover up to %@ megapixels.|该形状过大。每个形状最多可覆盖 %@ 百万像素。
+The copied layers exceed this project’s %@-megapixel limit.|复制的图层超过此工程的 %@ 百万像素限制。
+Bake keeps the current masked appearance in the dependent layers’ pixels. Remove Links reveals their pixels. You can undo either choice.|烘焙会将当前蒙版外观写入关联图层的像素。移除链接会显露它们原有的像素。两种操作均可撤销。
+Object Selection requires macOS 14 or later.|对象选择需要 macOS 14 或更高版本。
+Not enough unselected, opaque image pixels to synthesize a fill. Use a smaller selection with some surrounding image.|未选中且不透明的图像像素不足，无法合成填充。请缩小选区，并在周围保留一部分图像。
+Tool|工具
+Dropped|拖入的图像
+
+Layer › Add Layer Mask from Selection|图层 › 从选区添加图层蒙版
+Layer › Add Layer Mask|图层 › 添加图层蒙版
+Layer › Add Layer Mask Hiding Selection|图层 › 添加隐藏选区的图层蒙版
+Layer › Add Layer Mask (Hide All)|图层 › 添加图层蒙版（隐藏全部）
+
+Other formats: TIFF, PDF, GIF and EXR for highlights, plus Channel Pack for game textures|其他格式：TIFF、PDF、GIF，以及保留高光的 EXR 和游戏纹理通道打包
+Other formats: TIFF, PDF and GIF, plus Channel Pack for game textures|其他格式：TIFF、PDF、GIF，以及游戏纹理通道打包
+
+
+Nudge Left 1 px|向左微移 1 像素
+Move selected pixels Left 1 px|将所选像素向左移动 1 像素
+Nudge Left 10 px|向左微移 10 像素
+Move selected pixels Left 10 px|将所选像素向左移动 10 像素
+Nudge Right 1 px|向右微移 1 像素
+Move selected pixels Right 1 px|将所选像素向右移动 1 像素
+Nudge Right 10 px|向右微移 10 像素
+Move selected pixels Right 10 px|将所选像素向右移动 10 像素
+Nudge Up 1 px|向上微移 1 像素
+Move selected pixels Up 1 px|将所选像素向上移动 1 像素
+Nudge Up 10 px|向上微移 10 像素
+Move selected pixels Up 10 px|将所选像素向上移动 10 像素
+Nudge Down 1 px|向下微移 1 像素
+Move selected pixels Down 1 px|将所选像素向下移动 1 像素
+Nudge Down 10 px|向下微移 10 像素
+Move selected pixels Down 10 px|将所选像素向下移动 10 像素
+Decrease tracking by 10|减小字距（大步）
+Increase tracking by 10|增大字距（大步）
+Decrease leading by 10|减小行距（大步）
+Increase leading by 10|增大行距（大步）
+Unassigned|未分配
+
+Up|上

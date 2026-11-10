@@ -1,0 +1,1241 @@
+{
+  "ChineseTranslations": {
+    "files": [
+      "Compositor/ChineseLocalization.swift"
+    ],
+    "reason": "Translation resource name or compositional prefix handled by the localization engine."
+  },
+  "Undo ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift"
+    ],
+    "reason": "Translation resource name or compositional prefix handled by the localization engine."
+  },
+  "Redo ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift"
+    ],
+    "reason": "Translation resource name or compositional prefix handled by the localization engine."
+  },
+  "Last Filter: ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/CompositorApp.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Delete ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/CompositorApp.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Show ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/Document/EditorSession.swift",
+      "Compositor/Document/LayerEffects.swift",
+      "Compositor/UI/NativeLayerList.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Hide ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/Document/EditorSession.swift",
+      "Compositor/Document/LayerEffects.swift",
+      "Compositor/UI/NativeLayerList.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Edit ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/Document/LayerEffects.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Export ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/IO/ProjectController.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Reset ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift"
+    ],
+    "reason": "Translation resource name or compositional prefix handled by the localization engine."
+  },
+  "Add ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/Document/LayerEffects.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Remove ": {
+    "files": [
+      "Compositor/ChineseLocalization.swift",
+      "Compositor/Document/LayerEffects.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Compositor": {
+    "files": [
+      "Compositor/CompositorApp.swift"
+    ],
+    "reason": "Product or installed font name, preserved verbatim."
+  },
+  "CMYK": {
+    "files": [
+      "Compositor/CompositorApp.swift",
+      "Compositor/UI/ExportAsSheet.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "RGB": {
+    "files": [
+      "Compositor/Document/CameraRawColor.swift",
+      "Compositor/Document/Levels.swift",
+      "Compositor/UI/ExportAsSheet.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "HSL": {
+    "files": [
+      "Compositor/Document/CameraRawColor.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "CIPerspectiveTransform": {
+    "files": [
+      "Compositor/Document/CameraRawGeometryCalibration.swift",
+      "Compositor/Document/Distort.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CameraRawShadows": {
+    "files": [
+      "Compositor/Document/CameraRawShadows.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "CRS2": {
+    "files": [
+      "Compositor/Document/CameraRawShadows.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "CameraRawTables": {
+    "files": [
+      "Compositor/Document/CameraRawTables.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "CRT3": {
+    "files": [
+      "Compositor/Document/CameraRawTables.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "ASCII": {
+    "files": [
+      "Compositor/Document/Dither.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "CIBlendWithAlphaMask": {
+    "files": [
+      "Compositor/Document/Filters.swift",
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Rendering/EditorCanvas.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMotionBlur": {
+    "files": [
+      "Compositor/Document/Filters.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIUnsharpMask": {
+    "files": [
+      "Compositor/Document/Filters.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIBloom": {
+    "files": [
+      "Compositor/Document/Filters.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIRadialGradient": {
+    "files": [
+      "Compositor/Document/Filters.swift",
+      "Compositor/Document/VolumetricLight.swift",
+      "Compositor/Rendering/EditorCanvas.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILinearGradient": {
+    "files": [
+      "Compositor/Document/Filters.swift",
+      "Compositor/Rendering/EditorCanvas.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMaskedVariableBlur": {
+    "files": [
+      "Compositor/Document/Filters.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorBurnBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorDodgeBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CISoftLightBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILinearBurnBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILinearDodgeBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift",
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIVividLightBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILinearLightBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIPinLightBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIHardMixBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CISubtractBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift",
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIDivideBlendMode": {
+    "files": [
+      "Compositor/Document/LayerAppearance.swift",
+      "Compositor/Document/RimLight.swift",
+      "Compositor/Document/VolumetricLight.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CISRGBToneCurveToLinear": {
+    "files": [
+      "Compositor/Document/LensEffects.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILinearToSRGBToneCurve": {
+    "files": [
+      "Compositor/Document/LensEffects.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorMatrix": {
+    "files": [
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Document/RimLight.swift",
+      "Compositor/Document/SubjectRemoval.swift",
+      "Compositor/Document/VolumetricLight.swift",
+      "Compositor/Rendering/EditorCanvas.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIBlendWithMask": {
+    "files": [
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Document/PixelAdjust.swift",
+      "Compositor/Document/RimLight.swift",
+      "Compositor/Document/SubjectRemoval.swift",
+      "Compositor/Document/VolumetricLight.swift",
+      "Compositor/Rendering/LiveMaskRenderer.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIToneCurve": {
+    "files": [
+      "Compositor/Document/LensEffects.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIAreaMaximum": {
+    "files": [
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMorphologyMaximum": {
+    "files": [
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMultiplyCompositing": {
+    "files": [
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Document/RimLight.swift",
+      "Compositor/Document/VolumetricLight.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMorphologyRectangleMinimum": {
+    "files": [
+      "Compositor/Document/LensEffects.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMorphologyRectangleMaximum": {
+    "files": [
+      "Compositor/Document/LensEffects.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILanczosScaleTransform": {
+    "files": [
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILightenBlendMode": {
+    "files": [
+      "Compositor/Document/LensEffects.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIEdgePreserveUpsampleFilter": {
+    "files": [
+      "Compositor/Document/ObjectSelection.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorClamp": {
+    "files": [
+      "Compositor/Document/RimLight.swift",
+      "Compositor/Document/SubjectRemoval.swift",
+      "Compositor/Document/VolumetricLight.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIDifferenceBlendMode": {
+    "files": [
+      "Compositor/Document/RimLight.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIAdditionCompositing": {
+    "files": [
+      "Compositor/Document/RimLight.swift",
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "XCTestConfigurationFilePath": {
+    "files": [
+      "Compositor/Document/SelectionClipboard.swift",
+      "Compositor/Document/ToolDefaults.swift",
+      "Compositor/IO/CompositorApplicationDelegate.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Helvetica": {
+    "files": [
+      "Compositor/Document/TypeTool.swift"
+    ],
+    "reason": "Product or installed font name, preserved verbatim."
+  },
+  "CIMinimumCompositing": {
+    "files": [
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIAreaAverage": {
+    "files": [
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMaximumCompositing": {
+    "files": [
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMorphologyMinimum": {
+    "files": [
+      "Compositor/Document/VolumetricLight.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CMYK Profiles": {
+    "files": [
+      "Compositor/IO/CMYK.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "IHDR": {
+    "files": [
+      "Compositor/IO/ChannelPack.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "IDAT": {
+    "files": [
+      "Compositor/IO/ChannelPack.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "IEND": {
+    "files": [
+      "Compositor/IO/ChannelPack.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "XCTestBundlePath": {
+    "files": [
+      "Compositor/IO/CompositorApplicationDelegate.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "XCTestCase": {
+    "files": [
+      "Compositor/IO/CompositorApplicationDelegate.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "NSDisabledDictationMenuItem": {
+    "files": [
+      "Compositor/IO/CompositorApplicationDelegate.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "NSDisabledCharacterPaletteMenuItem": {
+    "files": [
+      "Compositor/IO/CompositorApplicationDelegate.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "NSMenuItemIndex": {
+    "files": [
+      "Compositor/IO/CompositorApplicationDelegate.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Manifest.json": {
+    "files": [
+      "Compositor/IO/DepthModel.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Data/com.apple.CoreML/model.mlmodel": {
+    "files": [
+      "Compositor/IO/DepthModel.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Data/com.apple.CoreML/weights/weight.bin": {
+    "files": [
+      "Compositor/IO/DepthModel.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Compositor/Depth Model %@": {
+    "files": [
+      "Compositor/IO/DepthModel.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "DepthMini.mlmodelc": {
+    "files": [
+      "Compositor/IO/DepthModel.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "DepthMini-%@.mlpackage": {
+    "files": [
+      "Compositor/IO/DepthModel.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "LMsk": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Layr": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Mtrn": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Alph": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FMsk": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FEid": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FXid": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "PxSD": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "TySh": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift",
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "SoLd": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "SoLE": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "hue ": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift",
+      "Compositor/IO/PSD/PSDTypes.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Ornt": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Vrtc": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "EngineData": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Txt ": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Txt": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "EngineDict": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Editor": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "StyleRun": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "RunArray": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "StyleSheet": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "StyleSheetData": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FontSize": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "ResourceDict": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FontSet": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FillColor": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "AutoLeading": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FauxBold": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "FauxItalic": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "ParagraphRun": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "ParagraphSheet": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Justification": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "HorizontalScale": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "VerticalScale": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Top ": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift",
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Rght": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift",
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Btom": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift",
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "UntF": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift",
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "TEXT": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Objc": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "GlbO": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "VlLs": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "obj ": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "GlbC": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Clss": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Enmr": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Idnt": {
+    "files": [
+      "Compositor/IO/PSD/PSDText.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "mul ": {
+    "files": [
+      "Compositor/IO/PSD/PSDTypes.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "div ": {
+    "files": [
+      "Compositor/IO/PSD/PSDTypes.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "sat ": {
+    "files": [
+      "Compositor/IO/PSD/PSDTypes.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "lum ": {
+    "files": [
+      "Compositor/IO/PSD/PSDTypes.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "SoCo": {
+    "files": [
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "Grn ": {
+    "files": [
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+  },
+  "PNG": {
+    "files": [
+      "Compositor/IO/ProjectController.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "JPEG": {
+    "files": [
+      "Compositor/IO/ProjectController.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "TIFF": {
+    "files": [
+      "Compositor/IO/ProjectController.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "PDF": {
+    "files": [
+      "Compositor/IO/ProjectController.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "GIF": {
+    "files": [
+      "Compositor/IO/ProjectController.swift",
+      "Compositor/UI/NativeLayerList.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "EXR": {
+    "files": [
+      "Compositor/IO/ProjectController.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "QuickLook": {
+    "files": [
+      "Compositor/IO/ProjectStore.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "Preview.jpg": {
+    "files": [
+      "Compositor/IO/ProjectStore.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "init(coder:) has not been implemented": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift",
+      "Compositor/Rendering/GPUCanvas.swift",
+      "Compositor/Rendering/InlineTextEditor.swift",
+      "Compositor/Rendering/SampleRingOverlay.swift",
+      "Compositor/Rendering/TransformOverlay.swift",
+      "Compositor/UI/CanvasRulers.swift",
+      "Compositor/UI/KeyboardShortcuts.swift",
+      "Compositor/UI/NativeLayerList.swift",
+      "Compositor/UI/ProjectWindowBridge.swift"
+    ],
+    "reason": "Developer-only fatalError diagnostic, not a normal interface entry."
+  },
+  "CompositorCPUCanvas": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "CIAffineTile": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorCubeWithColorSpace": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "transient %@": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "folder %@ %@ %@": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "CIBlendWithRedMask": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift",
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "none %@": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "effects %@ %@ %@ %@": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "own %@ %@ %@ ": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "adjustment %@ %@ %@ %@ %@ ": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "frame %@ %@ %@ %@": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "layer %@ %@": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "frame ": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "exact %@ %@ %@": {
+    "files": [
+      "Compositor/Rendering/EditorCanvas.swift"
+    ],
+    "reason": "Renderer cache key, implementation identifier or program name; never displayed as interface prose."
+  },
+  "CIRandomGenerator": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIPerspectiveTransformWithExtent": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIDarkenBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMultiplyBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIScreenBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIOverlayBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIHardLightBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIExclusionBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIHueBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CISaturationBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CILuminosityBlendMode": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIMaximumComponent": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorCurves": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "CIColorCube": {
+    "files": [
+      "Compositor/Rendering/GPUCanvas.swift"
+    ],
+    "reason": "Core Image filter identifier; changing it would change image processing behavior."
+  },
+  "Tool › %@": {
+    "files": [
+      "Compositor/UI/CommandPalette.swift"
+    ],
+    "reason": "Command identifier; the display path is translated component by component and the tool name has its own translation."
+  },
+  "CMYK – %@": {
+    "files": [
+      "Compositor/UI/ExportAsSheet.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "Esc": {
+    "files": [
+      "Compositor/UI/KeyboardShortcuts.swift"
+    ],
+    "reason": "Literal keyboard key name, not an untranslated instruction."
+  },
+  "Tab": {
+    "files": [
+      "Compositor/UI/KeyboardShortcuts.swift"
+    ],
+    "reason": "Literal keyboard key name, not an untranslated instruction."
+  },
+  "Not used": {
+    "files": [
+      "Compositor/UI/LayersPanel.swift"
+    ],
+    "reason": "Developer-only fatalError diagnostic, not a normal interface entry."
+  },
+  "HDR": {
+    "files": [
+      "Compositor/UI/NativeLayerList.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "%@ DPI": {
+    "files": [
+      "Compositor/UI/NewCanvasSheet.swift"
+    ],
+    "reason": "Standard color model, image format, profile name, bit-depth notation or measurement unit."
+  },
+  "iPhone 18 Pro": {
+    "files": [
+      "Compositor/UI/NewCanvasSheet.swift"
+    ],
+    "reason": "Product or installed font name, preserved verbatim."
+  },
+  "iPhone 18 Pro Max": {
+    "files": [
+      "Compositor/UI/NewCanvasSheet.swift"
+    ],
+    "reason": "Product or installed font name, preserved verbatim."
+  },
+  "MacBook Pro 14\"": {
+    "files": [
+      "Compositor/UI/NewCanvasSheet.swift"
+    ],
+    "reason": "Product or installed font name, preserved verbatim."
+  },
+  "MacBook Pro 16\"": {
+    "files": [
+      "Compositor/UI/NewCanvasSheet.swift"
+    ],
+    "reason": "Product or installed font name, preserved verbatim."
+  },
+  "Studio Display": {
+    "files": [
+      "Compositor/UI/NewCanvasSheet.swift"
+    ],
+    "reason": "Product or installed font name, preserved verbatim."
+  },
+  "CFBundleVersion": {
+    "files": [
+      "Compositor/UI/ProjectWindowBridge.swift"
+    ],
+    "reason": "Foundation/runtime key, binary resource name, on-disk file path or cache folder identifier; not an interface label."
+  },
+  "%@ × %@ px": {
+    "files": [
+      "Compositor/ContentView.swift",
+      "Compositor/Document/ShapeTool.swift",
+      "Compositor/Rendering/EditorCanvas.swift",
+      "Compositor/UI/CropControls.swift",
+      "Compositor/UI/NativeLayerList.swift"
+    ],
+    "reason": "International measurement unit or numeric dimension; px, ms and EV are intentionally retained."
+  },
+  "%@ px": {
+    "files": [
+      "Compositor/Document/ShapeTool.swift",
+      "Compositor/Rendering/TransformOverlay.swift"
+    ],
+    "reason": "International measurement unit or numeric dimension; px, ms and EV are intentionally retained."
+  },
+  "Lr16": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag; its protocol spelling must not change."
+  },
+  "Lr32": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag; its protocol spelling must not change."
+  },
+  "Mt16": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag; its protocol spelling must not change."
+  },
+  "Mt32": {
+    "files": [
+      "Compositor/IO/PSD/PSDReader.swift"
+    ],
+    "reason": "Photoshop binary format tag; its protocol spelling must not change."
+  },
+  "Rd  ": {
+    "files": [
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag; its protocol spelling must not change."
+  },
+  "Bl  ": {
+    "files": [
+      "Compositor/IO/PSD/PSDVector.swift"
+    ],
+    "reason": "Photoshop binary format tag; its protocol spelling must not change."
+  },
+  " ms": {
+    "files": [
+      "Compositor/UI/GIFTimeline.swift"
+    ],
+    "reason": "International measurement unit or numeric dimension; px, ms and EV are intentionally retained."
+  },
+  " by 10": {
+    "files": [
+      "Compositor/UI/KeyboardShortcuts.swift"
+    ],
+    "reason": "Stable shortcut identifier suffix; all four generated display titles have explicit reviewed Chinese translations."
+  },
+  " EV": {
+    "files": [
+      "Compositor/UI/RawDevelopSheet.swift"
+    ],
+    "reason": "International measurement unit or numeric dimension; px, ms and EV are intentionally retained."
+  }
+}

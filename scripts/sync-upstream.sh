@@ -27,6 +27,7 @@ else
 fi
 python3 scripts/generate-localization.py
 python3 scripts/audit-localization.py
+python3 scripts/review-localization.py
 git add Compositor/Resources
 git diff --cached --quiet || git commit -m "Regenerate Chinese resources for $tag"
 git push origin "$branch"

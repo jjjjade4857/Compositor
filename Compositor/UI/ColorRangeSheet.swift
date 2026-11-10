@@ -15,7 +15,7 @@ struct ColorRangeSheet: View {
                         .background(edit?.effectiveMode == mode ? Color.accentColor.opacity(0.25) : .clear,
                                     in: RoundedRectangle(cornerRadius: 4))
                         .help(zh(help(mode)))
-                        .accessibilityLabel("\(mode.rawValue) color")
+                        .accessibilityLabel("\(zh(mode.rawValue)) color")
                 }
                 Spacer()
             }

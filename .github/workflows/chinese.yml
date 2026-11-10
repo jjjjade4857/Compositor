@@ -17,6 +17,8 @@ jobs:
         run: python3 scripts/test-maintenance.py
       - name: Check translation coverage
         run: python3 scripts/audit-localization.py
+      - name: Review all source literals and display boundaries
+        run: python3 scripts/review-localization.py
       - name: Generate bundle resources
         run: python3 scripts/generate-localization.py
       - name: Build Chinese edition
@@ -24,17 +26,22 @@ jobs:
           xcodebuild build -project Compositor.xcodeproj -scheme Compositor
           -configuration Release -destination 'platform=macOS,arch=arm64'
           -derivedDataPath build/DerivedData CODE_SIGNING_ALLOWED=NO
-          PRODUCT_BUNDLE_IDENTIFIER=com.local.compositor.zhHans
+          PRODUCT_BUNDLE_IDENTIFIER=io.github.jjjjade4857.Compositor.zhHans
+      - name: Review compiler-extracted localization keys
+        run: python3 scripts/review-localization.py --compiler-data build/DerivedData --require-compiler-data
       - name: Verify resources and package
         run: |
           app=build/DerivedData/Build/Products/Release/Compositor.app
+          python3 scripts/configure-chinese-bundle.py "$app"
           test -f "$app/Contents/Resources/zh-Hans.lproj/Localizable.strings"
           test -f "$app/Contents/Resources/ChineseTranslations.json"
           plutil -lint "$app/Contents/Resources/zh-Hans.lproj/Localizable.strings"
           codesign --force --deep --sign - "$app"
           codesign --force --sign - --entitlements Config/Compositor.entitlements "$app"
           codesign --verify --strict "$app"
-          ditto -c -k --sequesterRsrc --keepParent "$app" build/Compositor-zh-Hans.zip
+          mkdir -p build/package
+          ditto "$app" "build/package/Compositor 中文版.app"
+          ditto -c -k --sequesterRsrc --keepParent "build/package/Compositor 中文版.app" build/Compositor-zh-Hans.zip
       - uses: actions/upload-artifact@v4
         with:
           name: Compositor-zh-Hans-${{ github.sha }}

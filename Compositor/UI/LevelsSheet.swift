@@ -59,7 +59,7 @@ struct LevelsSheet: View {
                 }
             }
             if let mode = edit?.sampleMode {
-                Text("Click the original layer to set \(mode.rawValue.lowercased()). Click the eyedropper again to stop.")
+                Text("Click the original layer to set \(zh(mode.rawValue)). Click the eyedropper again to stop.")
                     .font(.caption).foregroundStyle(.secondary)
             }
             VStack(alignment: .leading, spacing: 6) {
@@ -113,7 +113,7 @@ struct LevelsSheet: View {
             }
             let color: Color = switch settings.channel { case .rgb: .gray; case .red: .red; case .green: .green; case .blue: .blue }
             context.fill(path, with: .color(color))
-        }.accessibilityLabel("Original \(settings.channel.rawValue) histogram")
+        }.accessibilityLabel("Original \(zh(settings.channel.rawValue)) histogram")
         .help("Linear histogram with automatic vertical scaling. Tall spikes may extend beyond the graph; all tones from 0 to 255 remain included.")
     }
     private func handles(output: Bool) -> some View {

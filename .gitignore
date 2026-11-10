@@ -33,3 +33,12 @@ BUILD_PLAN.md
 # Localization maintenance output
 localization/audit-report.json
 *.log
+
+# Local review reports and personal project fixtures
+/local-cleanup.jsonl
+/全面汉化审查报告.md
+/PUBLISHED_COMMIT.txt
+/qa/
+localization/full-audit-report.json
+localization/comprehensive-candidates.json
+__pycache__/

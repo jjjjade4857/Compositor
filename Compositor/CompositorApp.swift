@@ -7,7 +7,7 @@ struct CompositorApp: App {
     @AppStorage("navigator.visible") private var showsNavigator = false
     private var session: EditorSession { applicationDelegate.session }
     private func filterMenuItem(_ kind: FilterKind) -> some View {
-        Button("\(kind.rawValue)…") { session.beginFilter(kind) }
+        Button(zh(kind.rawValue + "…")) { session.beginFilter(kind) }
             .disabled(!(kind == .vignette ? session.canVignette : session.canAdjustColors) || session.hueSaturation != nil)
     }
     var body: some Scene {
@@ -322,7 +322,7 @@ struct CompositorApp: App {
                     Button("Hue/Saturation…") { session.beginHueSaturation() }
                         .configuredKeyboardShortcut("u").disabled(!session.canAdjustColors)
                     ForEach([FilterKind.blackWhite, .colorBalance, .exposure, .gradientMap, .grain], id: \.self) { kind in
-                        Button("\(kind.rawValue)…") { session.beginFilter(kind) }
+                        Button(zh(kind.rawValue + "…")) { session.beginFilter(kind) }
                             .disabled(!session.canAdjustColors || session.hueSaturation != nil)
                     }
                     Button(zh(session.isMaskSelected ? "Invert Mask" : "Invert")) { Task { await session.invertPixels() } }
@@ -447,7 +447,7 @@ struct CompositorApp: App {
     private func loadCMYKProfile() {
         let panel = NSOpenPanel()
         panel.allowedContentTypes = [UTType(filenameExtension: "icc") ?? .data, UTType(filenameExtension: "icm") ?? .data]
-        panel.message = "Choose a CMYK ICC profile, such as the one your printer gave you"
+        panel.message = zh("Choose a CMYK ICC profile, such as the one your printer gave you")
         guard panel.runModal() == .OK, let url = panel.url else { return }
         do { session.proofProfile = try CMYK.load(url) }
         catch { session.importError = error.localizedDescription }

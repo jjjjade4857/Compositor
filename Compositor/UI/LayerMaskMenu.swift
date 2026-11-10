@@ -53,7 +53,7 @@ struct ProofBadge: NSViewRepresentable {
 /// A pill at the foot of the canvas naming a way it's showing the document, with a button to leave it. Built in
 /// AppKit, as the canvas under it is, so its button gets its clicks.
 final class CanvasPillView: NSView {
-    var title = "" { didSet { heading.stringValue = title; invalidateIntrinsicContentSize() } }
+    var title = "" { didSet { heading.stringValue = zh(title); invalidateIntrinsicContentSize() } }
     var detail = "" { didSet { name.stringValue = detail; invalidateIntrinsicContentSize() } }
     private let heading = NSTextField(labelWithString: "")
     private let name = NSTextField(labelWithString: "")

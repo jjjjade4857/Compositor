@@ -95,7 +95,7 @@ final class ProjectController {
             panel.canChooseFiles = false
             panel.canCreateDirectories = true
             panel.title = zh("Export \(layers.count) Layers as PNGs")
-            panel.message = "Choose a folder for the layers’ PNGs."
+            panel.message = zh("Choose a folder for the layers’ PNGs.")
             panel.prompt = zh("Export")
             guard await run(panel), let url = panel.url else { return }
             urls = names.map { url.appendingPathComponent($0) }
@@ -332,7 +332,7 @@ final class ProjectController {
             // A document that began as an image is saved, by default, beside it and under its name.
             let source = session.projectURL == nil ? session.sourceImageURL : nil
             panel.nameFieldStringValue = session.projectURL?.lastPathComponent
-                ?? source.map { $0.deletingPathExtension().lastPathComponent + ".comp" } ?? "Untitled.comp"
+                ?? source.map { $0.deletingPathExtension().lastPathComponent + ".comp" } ?? (zh("Untitled") + ".comp")
             if let source { panel.directoryURL = source.deletingLastPathComponent() }
             panel.title = zh(asNew ? "Save Project As" : "Save Project")
             let response: NSApplication.ModalResponse

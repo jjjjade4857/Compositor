@@ -63,7 +63,7 @@ nonisolated enum ChineseLocalization {
         }
         if value.contains(" › ") { return value.components(separatedBy: " › ").map(text).joined(separator: " › ") }
         if value.contains(" · ") { return value.components(separatedBy: " · ").map(text).joined(separator: " · ") }
-        for (prefix, translated) in [("Undo ", "撤销 "), ("Redo ", "重做 "), ("Last Filter: ", "上次使用的滤镜："), ("Delete ", "删除 "), ("Show ", "显示 "), ("Hide ", "隐藏 "), ("Edit ", "编辑 "), ("Export ", "导出 "), ("Reset ", "重置 "), ("Add ", "添加 "), ("Remove ", "移除 ")] {
+        for (prefix, translated) in [("Align ", "对齐 "), ("Distribute ", "分布 "), ("Cancel ", "取消 "), ("Copy ", "复制 "), ("Undo ", "撤销 "), ("Redo ", "重做 "), ("Last Filter: ", "上次使用的滤镜："), ("Delete ", "删除 "), ("Show ", "显示 "), ("Hide ", "隐藏 "), ("Edit ", "编辑 "), ("Export ", "导出 "), ("Reset ", "重置 "), ("Add ", "添加 "), ("Remove ", "移除 ")] {
             if value.hasPrefix(prefix) { return translated + text(String(value.dropFirst(prefix.count))) }
         }
         return value

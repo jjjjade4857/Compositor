@@ -215,7 +215,7 @@ struct ProjectTabStrip: View {
 
 private func projectTabLabelWidth(_ tab: ProjectTab, active: Bool) -> CGFloat {
     let font = NSFont.systemFont(ofSize: 12, weight: active ? .semibold : .medium)
-    let titleWidth = (tab.title as NSString).size(withAttributes: [.font: font]).width
+    let titleWidth = (tab.displayTitle as NSString).size(withAttributes: [.font: font]).width
     let dotWidth: CGFloat = tab.session.isModified ? 10 : 0 // 5 px dot and 5 px gap
     return min(155, max(35, ceil(titleWidth) + dotWidth))
 }
@@ -289,7 +289,7 @@ private struct OverflowTabsPill: View {
             guard workspace.canSwitch else { return [] }
             return hiddenIDs.compactMap { id in
                 workspace.tabs.first { $0.id == id }.map { tab in
-                    ((tab.session.isModified ? "• " : "") + tab.title, { workspace.select(tab.id) })
+                    ((tab.session.isModified ? "• " : "") + tab.displayTitle, { workspace.select(tab.id) })
                 }
             }
         })
@@ -321,7 +321,7 @@ private struct OverflowMenuAnchor: NSViewRepresentable {
             actions = entries.map(\.action)
             let menu = NSMenu()
             for (index, entry) in entries.enumerated() {
-                let item = NSMenuItem(title: zh(entry.title), action: #selector(choose(_:)), keyEquivalent: "")
+                let item = NSMenuItem(title: entry.title, action: #selector(choose(_:)), keyEquivalent: "")
                 item.target = self
                 item.tag = index
                 menu.addItem(item)
@@ -347,7 +347,7 @@ private struct ProjectTabButton: View {
                     if tab.session.isModified {
                         Circle().frame(width: 5, height: 5).accessibilityLabel("Unsaved changes")
                     }
-                    Text(zh(tab.title)).font(.system(size: 12, weight: active ? .semibold : .medium)).lineLimit(1)
+                    Text(tab.displayTitle).font(.system(size: 12, weight: active ? .semibold : .medium)).lineLimit(1)
                 }
                 .frame(width: projectTabLabelWidth(tab, active: active), alignment: .leading)
                 .padding(.leading, 11).padding(.trailing, workspace.canClose(tab) ? 8 : 11)
@@ -369,14 +369,14 @@ private struct ProjectTabButton: View {
                         .frame(width: 16, height: 28)
                         .padding(.trailing, 5)
                         .contentShape(Rectangle())
-                }.buttonStyle(.plain).help("Close \(tab.title)").disabled(!workspace.canSwitch)
-                    .accessibilityLabel("Close \(tab.title)")
+                }.buttonStyle(.plain).help("Close \(tab.displayTitle)").disabled(!workspace.canSwitch)
+                    .accessibilityLabel("Close \(tab.displayTitle)")
             }
         }
         .frame(height: 28)
         .background(targeted ? Color.accentColor.opacity(0.3) : Color.white.opacity(active ? 0.12 : 0.035), in: Capsule())
         .overlay(Capsule().strokeBorder(targeted ? Color.accentColor : Color.white.opacity(active ? 0.22 : 0.08), lineWidth: targeted ? 2 : 1))
-        .help(zh(targeted ? "Add to \(tab.title)" : tab.title))
+        .help(targeted ? zh("Add to \(tab.displayTitle)") : tab.displayTitle)
         .onDrop(of: [UTType.fileURL.identifier, UTType.image.identifier, ProjectWorkspace.layerType], delegate:
             ProjectTabDropDelegate(workspace: workspace, destination: tab.id, targeted: $targeted))
     }

@@ -44,7 +44,7 @@ nonisolated enum NewCanvasUnit: String, CaseIterable, Sendable {
 /// What a new canvas starts as: see-through, or a Background layer of white or black.
 nonisolated enum NewCanvasBackground: String, CaseIterable, Sendable {
     case transparent, white, black
-    var title: String { "\(rawValue.capitalized) canvas" }
+    var title: String { "\(zh(rawValue.capitalized)) canvas" }
     var next: NewCanvasBackground { Self.allCases[(Self.allCases.firstIndex(of: self)! + 1) % Self.allCases.count] }
     var color: CGColor? {
         switch self {

@@ -89,7 +89,7 @@ struct HueSaturationSheet: View {
                     .background(session.hueSampleMode == mode ? Color.accentColor.opacity(0.25) : .clear,
                                 in: RoundedRectangle(cornerRadius: 4))
                     .help(zh(mode.help))
-                    .accessibilityLabel("\(mode.rawValue) color")
+                    .accessibilityLabel("\(zh(mode.rawValue)) color")
                 }
                 Divider().frame(height: 16)
             }
@@ -129,7 +129,7 @@ struct HueSaturationSheet: View {
             Text(zh(title)).frame(width: 76, alignment: .leading)
                 .onTapGesture(count: 2) { value.wrappedValue = reset }
                 .scrubbable(sensitivity: 1, value: value, range: range)
-            CameraRawSlider(value: value.wrappedValue, range: range, track: track, help: "\(title). Double-click to reset.",
+            CameraRawSlider(value: value.wrappedValue, range: range, track: track, help: "\(zh(title)). Double-click to reset.",
                             onChange: { value.wrappedValue = $0.rounded() }, onReset: { value.wrappedValue = reset })
             TextField(zh(title), value: value, format: .number.precision(.fractionLength(0)))
                 .frame(width: 48).textFieldStyle(.roundedBorder).multilineTextAlignment(.trailing)
