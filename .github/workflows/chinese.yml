@@ -41,7 +41,7 @@ jobs:
           codesign --verify --strict "$app"
           mkdir -p build/package
           ditto "$app" "build/package/Compositor 中文版.app"
-          ditto -c -k --sequesterRsrc --keepParent "build/package/Compositor 中文版.app" build/Compositor-zh-Hans.zip
+          python3 scripts/archive-chinese.py "build/package/Compositor 中文版.app" build/Compositor-zh-Hans.zip
       - uses: actions/upload-artifact@v4
         with:
           name: Compositor-zh-Hans-${{ github.sha }}

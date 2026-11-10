@@ -67,4 +67,19 @@ class LocalizationAuditTests(unittest.TestCase):
   code,report=self.audit('Text(zh("Offset"))','Offset|偏移\n')
   self.assertEqual(code,0);self.assertFalse(report['untranslated_literals'])
 
+class ArchiveTests(unittest.TestCase):
+ def test_unicode_names_executable_bits_and_symlinks_survive_archive(self):
+  import stat,zipfile
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);app=root/'Compositor 中文版.app';binary=app/'Contents/MacOS/Compositor';binary.parent.mkdir(parents=True)
+   binary.write_text('#!/bin/sh\nexit 0\n');binary.chmod(0o755)
+   (app/'ExecutableLink').symlink_to('Contents/MacOS/Compositor')
+   output=root/'release.zip'
+   subprocess.run(['python3',str(ROOT/'scripts/archive-chinese.py'),str(app),str(output)],check=True,capture_output=True)
+   with zipfile.ZipFile(output) as archive:
+    info=archive.getinfo('Compositor 中文版.app/Contents/MacOS/Compositor')
+    self.assertTrue(info.flag_bits & 0x800);self.assertTrue(info.external_attr >> 16 & 0o111)
+    link=archive.getinfo('Compositor 中文版.app/ExecutableLink')
+    self.assertTrue(stat.S_ISLNK(link.external_attr >> 16));self.assertEqual(archive.read(link),'Contents/MacOS/Compositor'.encode())
+
 if __name__=='__main__':unittest.main()
