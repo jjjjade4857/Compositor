@@ -4,6 +4,8 @@ Mac 上的开源图像编辑器 [Compositor](https://github.com/robbietilton/Com
 
 [**下载最新版**](https://github.com/jjjjade4857/Compositor/releases/latest) · [反馈问题](https://github.com/jjjjade4857/Compositor/issues) · [使用教程](docs/使用指南/Compositor-中文版-详细使用教程.md) · [维护与构建](README.zh-Hans.md)
 
+[![Chinese build](https://github.com/jjjjade4857/Compositor/actions/workflows/chinese.yml/badge.svg?branch=zh-Hans)](https://github.com/jjjjade4857/Compositor/actions/workflows/chinese.yml) [![Verify](https://github.com/jjjjade4857/Compositor/actions/workflows/verify.yml/badge.svg?branch=zh-Hans)](https://github.com/jjjjade4857/Compositor/actions/workflows/verify.yml)
+
 ![Compositor 中文版主界面](docs/images/zh-hans-main-window.png)
 
 ## 安装
