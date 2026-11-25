@@ -590,10 +590,11 @@
   },
   "hue ": {
     "files": [
+      "Compositor/IO/PSD/PSDWriter.swift",
       "Compositor/IO/PSD/PSDReader.swift",
       "Compositor/IO/PSD/PSDTypes.swift"
     ],
-    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+    "reason": "Project file token written to the PSD blend-mode key; not interface text."
   },
   "Ornt": {
     "files": [
@@ -817,27 +818,35 @@
   },
   "mul ": {
     "files": [
+      "Compositor/IO/PSD/PSDWriter.swift",
+      "Compositor/IO/PSD/PSDReader.swift",
       "Compositor/IO/PSD/PSDTypes.swift"
     ],
-    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+    "reason": "Project file token written to the PSD blend-mode key; not interface text."
   },
   "div ": {
     "files": [
+      "Compositor/IO/PSD/PSDWriter.swift",
+      "Compositor/IO/PSD/PSDReader.swift",
       "Compositor/IO/PSD/PSDTypes.swift"
     ],
-    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+    "reason": "Project file token written to the PSD blend-mode key; not interface text."
   },
   "sat ": {
     "files": [
+      "Compositor/IO/PSD/PSDWriter.swift",
+      "Compositor/IO/PSD/PSDReader.swift",
       "Compositor/IO/PSD/PSDTypes.swift"
     ],
-    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+    "reason": "Project file token written to the PSD blend-mode key; not interface text."
   },
   "lum ": {
     "files": [
+      "Compositor/IO/PSD/PSDWriter.swift",
+      "Compositor/IO/PSD/PSDReader.swift",
       "Compositor/IO/PSD/PSDTypes.swift"
     ],
-    "reason": "Photoshop binary format tag or descriptor field; must retain its original protocol spelling."
+    "reason": "Project file token written to the PSD blend-mode key; not interface text."
   },
   "SoCo": {
     "files": [
@@ -1237,5 +1246,29 @@
       "Compositor/UI/RawDevelopSheet.swift"
     ],
     "reason": "International measurement unit or numeric dimension; px, ms and EV are intentionally retained."
+  },
+  "</Layer group>": {
+    "files": [
+      "Compositor/IO/PSD/PSDWriter.swift"
+    ],
+    "reason": "Layer divider name stored in the PSD file; Photoshop reads it, users do not."
+  },
+  "PSD": {
+    "files": [
+      "Compositor/IO/ProjectController.swift"
+    ],
+    "reason": "Format abbreviation shown as a brand-like token; PSD stays PSD in Chinese UIs."
+  },
+  "no up": {
+    "files": [
+      "Compositor/UI/NativeLayerList.swift"
+    ],
+    "reason": "Test hook diagnostic passed to rowDragEndForTesting; never displayed."
+  },
+  "late up": {
+    "files": [
+      "Compositor/UI/NativeLayerList.swift"
+    ],
+    "reason": "Test hook diagnostic passed to rowDragEndForTesting; never displayed."
   }
 }

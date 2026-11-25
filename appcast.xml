@@ -3,18 +3,14 @@
   <channel>
     <title>Compositor</title>
     <item>
-      <title>Version 1.6.5</title>
-      <pubDate>Sat, 07 Nov 2026 17:41:33 +0000</pubDate>
-      <sparkle:version>64</sparkle:version>
-      <sparkle:shortVersionString>1.6.5</sparkle:shortVersionString>
+      <title>Version 1.7.0</title>
+      <pubDate>Sat, 21 Nov 2026 22:31:57 +0000</pubDate>
+      <sparkle:version>75</sparkle:version>
+      <sparkle:shortVersionString>1.7.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-      <link>https://github.com/robbietilton/Compositor/releases/tag/v1.6.5</link>
-      <changes><![CDATA[Redesigned sliders throughout the app, with a slim track and a narrow knob that turns to glass while you drag
-A refreshed Color Picker that's more compact, with a new and current color comparison
-UI polish across panels and tool bars
-Fixed stroke layer effects being uneven or clipped on rounded shapes
-Fixed painting past the edges of a scaled-down layer, which could fail with a GPU error]]></changes>
-      <enclosure url="https://github.com/robbietilton/Compositor/releases/download/v1.6.5/Compositor.dmg" sparkle:edSignature="ObVLnm5VIXdjzBSBbimG13ENOKaNhPszHHDRZsdrAaVJAMX+ON/aTnBynNdfVCDW6W4+aJktvgigcQbWG8zOBQ==" length="8845829" type="application/octet-stream"/>
+      <link>https://github.com/robbietilton/Compositor/releases/tag/v1.7.0</link>
+      <changes><![CDATA[Up and Down arrows now step the numbers in adjustment and filter panels]]></changes>
+      <enclosure url="https://github.com/robbietilton/Compositor/releases/download/v1.7.0/Compositor.dmg" sparkle:edSignature="KIF/KELs7xbnS7mzX1auFZ/5YRxB2JGBGfAnOgvvCU/yO5OmR0GWNbhlQ/NbZX/++lEJ/PQ1YZnkIUEhdKDjAw==" length="8983787" type="application/octet-stream"/>
     </item>
   </channel>
 </rss>
