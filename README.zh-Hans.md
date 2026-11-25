@@ -2,7 +2,7 @@
 
 上游：<https://github.com/robbietilton/Compositor>。本仓库是社区 fork，保留 MIT 许可。
 
-`main` 保留上游基线；`zh-Hans` 是中文支持分支，初始基于上游 v1.6.6（2f507800bc4b32db6b31d34a822cbfc577bf46cf）。源码保留英文回退；仓库打包的中文发行版使用统一简体中文元数据，固定应用名称和标识。
+`main` 保留上游基线；`zh-Hans` 是中文支持分支，基线为上游 v1.6.6（2f507800bc4b32db6b31d34a822cbfc577bf46cf），已合并上游 v1.7.1（989e3d1）。源码保留英文回退；仓库打包的中文发行版使用统一简体中文元数据，固定应用名称和标识。
 
 固定 SwiftUI 文本通过原生 Localizable.strings 本地化，动态字符串及 AppKit 菜单通过 ChineseLocalization 翻译显示名称。混合模式保留独立的原始标识，不改变工程格式或用户内容。翻译源为 localization/zh-Hans.txt；Compositor/Resources 中的文件由脚本生成，可被 Xcode 原生构建直接打包。
 

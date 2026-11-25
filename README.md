@@ -1,6 +1,6 @@
 # Compositor 简体中文版（非官方）
 
-Mac 上的开源图像编辑器 [Compositor](https://github.com/robbietilton/Compositor) 的社区简体中文构建，基于上游 v1.6.6，MIT 许可，与上游作者无隶属关系。
+Mac 上的开源图像编辑器 [Compositor](https://github.com/robbietilton/Compositor) 的社区简体中文构建，基于上游 v1.7.1，MIT 许可，与上游作者无隶属关系。
 
 [**下载最新版**](https://github.com/jjjjade4857/Compositor/releases/latest) · [反馈问题](https://github.com/jjjjade4857/Compositor/issues) · [使用教程](docs/使用指南/Compositor-中文版-详细使用教程.md) · [维护与构建](README.zh-Hans.md)
 
